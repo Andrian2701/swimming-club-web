@@ -3,14 +3,17 @@
 
 header {
   width: 100%;
-  z-index: 999;
 
   nav {
     padding: 2rem 3rem;
     @include display-flex(flex, auto, center, space-between);
 
+    @media (max-width: $lg-size) {
+      padding: 1rem 3rem;
+    }
+
     .logo {
-      width: 9rem;
+      width: 8rem;
 
       a {
         img {
@@ -25,13 +28,13 @@ header {
       ul {
         list-style: none;
         display: flex;
-        gap: 45px;
+        gap: 2.8rem;
 
         a {
           text-decoration: none;
           transition: all 0.3s;
-          font-weight: 700;
-          font-size: 17px;
+          font-weight: $fw-700;
+          font-size: 1rem;
           color: $black-color;
           cursor: pointer;
 
@@ -49,8 +52,8 @@ header {
     .sign-up-btn {
       a {
         padding: 0.8rem 2rem;
-        font-weight: 700;
-        font-size: 15px;
+        font-weight: $fw-700;
+        font-size: 0.9rem;
         text-decoration: none;
         transition: all 0.3s;
         color: $purple-color;
@@ -72,7 +75,7 @@ header {
     .hamburger-menu {
       i {
         color: $purple-color;
-        font-size: 2.2rem;
+        font-size: 2rem;
         cursor: pointer;
         transition: all 0.3s;
         @include display-flex(flex, auto, center, auto);
@@ -80,33 +83,33 @@ header {
     }
   }
 
-  .mob-menu {
+  .mob-nav {
     background: $white-color;
     width: 100%;
     height: 100vh;
     position: fixed;
     top: 0;
     right: -100%;
-    transition: all 0.5s ease-in-out;
-    z-index: 1000;
+    transition: all 0.4s ease-in-out;
     @include display-flex(flex, column, auto, auto);
 
     i {
       transition: all 0.3s;
-      font-size: 2.2rem;
+      font-size: 2rem;
       position: absolute;
-      top: 3rem;
+      top: 2.2rem;
       right: 2.8rem;
       cursor: pointer;
       color: $purple-color;
     }
 
-    .mob-menu-links {
+    .mob-nav-links {
       height: 100%;
+
       ul {
         height: 100%;
         list-style: none;
-        gap: 30px;
+        gap: 2.8rem;
         @include display-flex(flex, column, center, center);
 
         li {
@@ -114,8 +117,8 @@ header {
             text-decoration: none;
             color: $black-color;
             cursor: pointer;
-            font-weight: 700;
-            font-size: 22.5px;
+            font-weight: $fw-700;
+            font-size: 1.2rem;
             transition: all 0.3s;
 
             &:hover {

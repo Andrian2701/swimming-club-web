@@ -1,0 +1,219 @@
+@use "./global/vars" as *;
+@use "./global/mixin" as *;
+
+.tabbed-content {
+  padding: 2rem 7vw 2rem 7vw;
+  background-color: $white-color;
+
+  @media (min-width: $lg-size) {
+    display: flex;
+  }
+
+  .text-content {
+    margin-top: 2.7rem;
+
+    @media (min-width: $lg-size) {
+      width: 50%;
+    }
+
+    span {
+      letter-spacing: 0.1em;
+      font-size: 0.8rem;
+      font-weight: $fw-600;
+      color: $purple-color;
+    }
+
+    h2 {
+      font-weight: $fw-600;
+      font-size: 1.5rem;
+      margin-top: 0.8rem;
+      color: $black-color;
+
+      @media (max-width: $md-size) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .tab-content {
+    margin-top: 4rem;
+
+    .tab-list {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1.6rem;
+
+        @media (max-width: 467px) {
+          @include display-flex(auto, column, flex-start, auto);
+          height: 8.5rem;
+          gap: 1rem;
+        }
+
+        @media (min-width: $lg-size) {
+          @include display-flex(auto, column, flex-start, auto);
+          height: 8.5rem;
+          gap: 0;
+        }
+
+        li {
+          font-size: 1rem;
+          font-weight: $fw-700;
+          cursor: pointer;
+          color: #828f99;
+          transition: all 0.3s;
+          margin-bottom: auto;
+
+          div {
+            display: none;
+          }
+
+          &:hover {
+            color: $black-color;
+          }
+        }
+
+        .active {
+          font-size: 1rem;
+          font-weight: $fw-700;
+          color: $black-color;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          div {
+            display: block;
+            margin-top: 13%;
+            margin-left: 50%;
+            border-radius: 5rem;
+            width: 6px;
+            height: 6px;
+            background-color: $purple-color;
+
+            @media (max-width: 467px) {
+              margin-left: 0;
+            }
+
+            @media (min-width: $lg-size) {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .tab-text {
+      margin-top: 2.5rem;
+
+      h4 {
+        margin-top: 1.5rem;
+        font-weight: $fw-600;
+        color: $black-color;
+        font-size: 1.1rem;
+
+        @media (max-width: $md-size) {
+          font-size: 1rem;
+        }
+      }
+
+      div {
+        margin-top: 1.7rem;
+        line-height: 1.5rem;
+        font-weight: $fw-400;
+        color: $light-black-color;
+      }
+    }
+
+    .learn-more-btn {
+      margin-top: 4rem;
+
+      a {
+        padding: 0.8rem 2rem;
+        font-weight: $fw-700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.3s;
+        color: $white-color;
+        background-color: $purple-color;
+        border-radius: 10rem;
+        border: 2px solid $purple-color;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $purple-color;
+          background-color: transparent;
+          border: 2px solid $purple-color;
+        }
+      }
+    }
+  }
+
+  .imgs {
+    margin-top: 3.5rem;
+    position: relative;
+
+    @media (min-width: $lg-size) {
+      width: 50%;
+      gap: 3.5rem;
+      @include display-flex(flex, column, center, center);
+    }
+
+    .img1 {
+      width: 100%;
+      max-height: 18rem;
+      min-height: 18rem;
+      object-fit: cover;
+      object-position: 50% 30%;
+
+      @media (min-width: $md-size) {
+        width: 80%;
+        float: right;
+      }
+
+      @media (min-width: $lg-size) {
+        width: 80%;
+        margin-left: auto;
+      }
+    }
+
+    .img2 {
+      position: absolute;
+      top: 15.5rem;
+      left: 0;
+      width: 45%;
+      max-height: 18rem;
+      min-height: 8rem;
+      object-fit: cover;
+
+      @media (min-width: $md-size) {
+        top: 15rem;
+      }
+
+      @media (min-width: $lg-size) {
+        width: 80%;
+        margin-left: auto;
+        position: static;
+      }
+    }
+
+    .img3 {
+      position: absolute;
+      top: 21.5rem;
+      right: 0;
+      width: 45%;
+      max-height: 18rem;
+      min-height: 8rem;
+      object-fit: cover;
+
+      @media (min-width: $md-size) {
+        top: 21.5rem;
+      }
+
+      @media (min-width: $lg-size) {
+        width: 80%;
+        margin-left: auto;
+        position: static;
+      }
+    }
+  }
+}

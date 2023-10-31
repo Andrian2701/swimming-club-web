@@ -1,0 +1,134 @@
+@use "./global/vars" as *;
+@use "./global/mixin" as *;
+
+.benefits {
+  padding: 2rem 8vw 2rem 8vw;
+  background-color: $grey-color;
+
+  .header {
+    width: 100%;
+
+    @media (min-width: $xl-size) {
+      @include display-flex(flex, auto, center, center);
+    }
+
+    .heading {
+      margin-top: 2.7rem;
+
+      @media (min-width: $xl-size) {
+        width: 50%;
+        margin-top: 0rem;
+      }
+
+      span {
+        letter-spacing: 0.1em;
+        font-size: 0.8rem;
+        color: $purple-color;
+        font-weight: $fw-600;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 0.8rem;
+        font-weight: $fw-600;
+        color: $black-color;
+
+        @media (max-width: $md-size) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .description {
+      @media (min-width: $xl-size) {
+        width: 50%;
+      }
+
+      margin-top: 3.2rem;
+      line-height: 1.5rem;
+      font-weight: $fw-400;
+      color: $light-black-color;
+    }
+  }
+
+  .benefit-items {
+    margin-top: 3rem;
+    gap: 2.8rem;
+
+    @media (min-width: $xl-size) {
+      display: flex;
+    }
+
+    @media (min-width: $md-size) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (max-width: $md-size) {
+      @include display-flex(flex, column, center, center);
+    }
+
+    .benefit-item.purple,
+    .benefit-item.green {
+      width: 100%;
+      background-color: $white-color;
+      padding: 3.8rem 1.9rem 2.5rem 1.9rem;
+      box-shadow: 0px 25px 15px -20px rgba(135, 138, 170, 0.2);
+
+      @media (min-width: $md-size) {
+        width: 46%;
+      }
+
+      @media (min-width: $xl-size) {
+        width: 21%;
+        padding: 3.8rem 1.9rem 3rem 1.9rem;
+      }
+
+      h4 {
+        margin-top: 1.5rem;
+        font-weight: $fw-600;
+        font-size: 1.1rem;
+        color: $black-color;
+
+        @media (max-width: $md-size) {
+          font-size: 1rem;
+        }
+      }
+
+      div {
+        margin-top: 1.5rem;
+        line-height: 1.5rem;
+        font-weight: $fw-400;
+        color: $light-black-color;
+      }
+    }
+
+    .benefit-item.purple {
+      span {
+        border-radius: 10rem;
+        padding: 1rem 1rem 0rem 1rem;
+        background-color: $light-green-color;
+        font-size: 2.5rem;
+        color: $black-color;
+      }
+      @media (min-width: $xl-size) {
+        margin-top: 3rem;
+      }
+    }
+
+    .benefit-item.green {
+      span {
+        border-radius: 10rem;
+        padding: 1rem 1rem 0rem 1rem;
+        background-color: $light-purple-color;
+        font-size: 2.5rem;
+        color: $black-color;
+        font-weight: $fw-400;
+      }
+      @media (min-width: $xl-size) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

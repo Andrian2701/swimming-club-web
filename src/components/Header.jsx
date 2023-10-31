@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { RiMenu3Fill } from "react-icons/ri";
+import MobileNav from "./MobileNav";
 import logoImg from "../img/logo/logo.png";
-import MobileMenu from "./MobileMenu";
 import "../styles/Header.scss";
 
 export default function Header() {
@@ -39,7 +39,7 @@ export default function Header() {
           </ul>
         </div>
         <div className="sign-up-btn">
-          <Link to="/">Sign Up</Link>
+          <Link to="/">Sign up</Link>
         </div>
         {mobLayout && (
           <div className="hamburger-menu">
@@ -49,7 +49,7 @@ export default function Header() {
           </div>
         )}
       </nav>
-      <MobileMenu
+      <MobileNav
         hamburgerMenu={hamburgerMenu}
         setHamburgerMenuHandler={setHamburgerMenuHandler}
       />
