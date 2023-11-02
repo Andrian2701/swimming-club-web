@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { tabsData } from "../const/contentData";
 import "../styles/TabbedContent.scss";
 
-export default function Tabs() {
+export default function Tab() {
   const [selectedTab, setSelectedTab] = useState(tabsData[0]);
 
   return (
@@ -28,7 +29,7 @@ export default function Tabs() {
         <div>{selectedTab.description}</div>
       </div>
       <div className="learn-more-btn">
-        <a href="#">Learn more</a>
+        <Link href="/">Learn more</Link>
       </div>
     </div>
   );

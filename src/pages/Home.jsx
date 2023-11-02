@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Benefits from "../components/Benefits";
 import TabbedContent from "../components/TabbedContent";
+import Team from "../components/Team";
 
 export default function Home() {
   return (
@@ -9,8 +10,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Benefits />
         <TabbedContent />
+        <Benefits />
+        <Team />
       </main>
     </>
   );

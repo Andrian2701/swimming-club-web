@@ -3,6 +3,7 @@
 
 header {
   width: 100%;
+  z-index: 999;
 
   nav {
     padding: 2rem 3rem;
@@ -49,7 +50,10 @@ header {
       }
     }
 
-    .sign-up-btn {
+    .cta-container {
+      display: flex;
+      gap: 1rem;
+
       a {
         padding: 0.8rem 2rem;
         font-weight: $fw-700;
@@ -61,18 +65,21 @@ header {
         border: 2px solid $purple-color;
         cursor: pointer;
 
+        @media (max-width: $sm-size) {
+          display: none;
+        }
+
         &:hover {
           background-color: $purple-color;
           color: $white-color;
         }
       }
-
-      @media (max-width: $lg-size) {
-        display: none;
-      }
     }
 
     .hamburger-menu {
+      display: flex;
+      justify-content: center;
+
       i {
         color: $purple-color;
         font-size: 2rem;
@@ -90,6 +97,7 @@ header {
     position: fixed;
     top: 0;
     right: -100%;
+    z-index: 1000;
     transition: all 0.4s ease-in-out;
     @include display-flex(flex, column, auto, auto);
 

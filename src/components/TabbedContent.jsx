@@ -1,7 +1,7 @@
 import Tab from "./Tab";
-import detailsImg1 from "../img/details/detailsImg1.jpg";
-import detailsImg2 from "../img/details/detailsImg1.jpg";
-import detailsImg3 from "../img/details/detailsImg1.jpg";
+import detailsImg1 from "../img/tabs/tabsImg1.jpg";
+import detailsImg2 from "../img/tabs/tabsImg2.jpeg";
+import detailsImg3 from "../img/tabs/tabsImg3.jpeg";
 import "../styles/TabbedContent.scss";
 
 export default function TabbedContent() {

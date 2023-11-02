@@ -1,38 +1,29 @@
-import { GiWhistle } from "react-icons/gi";
-import { BiTask } from "react-icons/bi";
-import { IoSettingsSharp } from "react-icons/io5";
-import { FaSwimmingPool } from "react-icons/fa";
-
 // BenefitItem
 
 export const benefitsData = [
   {
     id: 1,
-    icon: <GiWhistle />,
-    heading: "Qualified Staff",
+    heading: "01.",
     description:
       "Our coaches share a common thread: a one-of-a-kind approach, and a wealth of qualifications.",
   },
   {
     id: 2,
-    icon: <IoSettingsSharp />,
-    heading: "Modern Methods",
+    heading: "02.",
     description:
       "Unlock your full potential with our personalized personal development programs.",
   },
   {
     id: 3,
-    icon: <BiTask />,
-    heading: "Personal Development",
+    heading: "03.",
     description:
       "Explore our teaching techniques, specially crafted to make swimming exciting and effective.",
   },
   {
     id: 4,
-    icon: <FaSwimmingPool />,
-    heading: "Unique Infrastructure",
+    heading: "04.",
     description:
-      " Experience unmatched comfort and innovation with our state-of-the-art pools and top-tier gear.",
+      " Experience unmatched comfort and innovation with our state-of-the-art pools.",
   },
 ];
 

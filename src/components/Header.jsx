@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { RiMenu3Fill } from "react-icons/ri";
+import { CgMenuRightAlt } from "react-icons/cg";
 import MobileNav from "./MobileNav";
 import logoImg from "../img/logo/logo.png";
 import "../styles/Header.scss";
@@ -38,16 +38,18 @@ export default function Header() {
             </li>
           </ul>
         </div>
-        <div className="sign-up-btn">
+        <div className="cta-container">
+          {mobLayout && (
+            <div className="hamburger-menu">
+              <i>
+                <CgMenuRightAlt
+                  onClick={() => setHamburgerMenu(!hamburgerMenu)}
+                />
+              </i>
+            </div>
+          )}
           <Link to="/">Sign up</Link>
         </div>
-        {mobLayout && (
-          <div className="hamburger-menu">
-            <i>
-              <RiMenu3Fill onClick={() => setHamburgerMenu(!hamburgerMenu)} />
-            </i>
-          </div>
-        )}
       </nav>
       <MobileNav
         hamburgerMenu={hamburgerMenu}
