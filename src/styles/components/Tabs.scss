@@ -1,0 +1,170 @@
+@use "../global" as *;
+
+.tabs {
+  margin-top: 2.5rem;
+
+  .tab-list {
+    margin-top: 2.5rem;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 1.6rem;
+
+      @media (max-width: 500px) {
+        @include display-flex(auto, column, flex-start, auto);
+        height: 8.5rem;
+        gap: 1rem;
+      }
+
+      @media (min-width: $query-lg) {
+        @include display-flex(auto, column, flex-start, auto);
+        height: 8.5rem;
+        gap: 0;
+      }
+
+      li {
+        font-size: $a-size;
+        font-weight: $fw-700;
+        cursor: pointer;
+        color: #828f99;
+        transition: all 0.3s;
+        margin-bottom: auto;
+
+        div {
+          display: none;
+        }
+
+        &:hover {
+          color: $color-dark-black;
+        }
+      }
+
+      .active {
+        font-size: 1rem;
+        font-weight: $fw-700;
+        color: $color-dark-black;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        div {
+          display: block;
+          margin-top: 13%;
+          margin-left: 50%;
+          border-radius: 5rem;
+          width: 6px;
+          height: 6px;
+          background-color: $color-purple;
+
+          @media (max-width: 467px) {
+            margin-left: 0;
+          }
+
+          @media (min-width: $query-lg) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    margin-top: 2.5rem;
+
+    h4 {
+      font-weight: $fw-600;
+      color: $color-dark-black;
+      font-size: 1.1rem;
+
+      @media (max-width: $query-md) {
+        font-size: 1rem;
+      }
+    }
+
+    div {
+      margin-top: 1.7rem;
+      line-height: 1.5rem;
+      font-weight: $fw-400;
+      color: $color-light-black;
+    }
+  }
+
+  .learn-more-btn {
+    margin-top: 4rem;
+
+    @include purple-btn;
+  }
+}
+
+.imgs {
+  position: relative;
+
+  @media (max-width: $query-sm), (min-width: $query-sm) {
+    height: 29.5rem;
+    margin-top: 4rem;
+  }
+
+  @media (min-width: $query-md) {
+    height: 33.5rem;
+    margin-top: 4rem;
+  }
+
+  @media (min-width: $query-lg) {
+    margin-top: 2.7rem;
+    width: 50%;
+    gap: 3rem;
+    height: 100%;
+    @include display-flex(flex, column, center, center);
+  }
+
+  .img1 {
+    width: 100%;
+    object-fit: cover;
+    max-height: 18rem;
+    min-height: 18rem;
+    object-position: 50% 30%;
+
+    @media (min-width: $query-md) {
+      width: 80%;
+      float: right;
+    }
+
+    @media (min-width: $query-lg) {
+      width: 80%;
+      height: 18rem;
+      margin-left: auto;
+    }
+  }
+
+  .img2 {
+    @extend .img1;
+    position: absolute;
+    max-height: 18rem;
+    min-height: 8rem;
+    top: 15.5rem;
+    left: 0;
+    width: 45%;
+
+    @media (min-width: $query-lg) {
+      width: 80%;
+      margin-left: auto;
+      position: static;
+    }
+  }
+
+  .img3 {
+    @extend .img1;
+    position: absolute;
+    max-height: 18rem;
+    min-height: 8rem;
+    top: 21.5rem;
+    right: 0;
+    width: 45%;
+
+    @media (min-width: $query-lg) {
+      width: 80%;
+      margin-left: auto;
+      position: static;
+    }
+  }
+}

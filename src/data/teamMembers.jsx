@@ -1,50 +1,50 @@
-import teamImg1 from "../img/team/teamImg1.jpg";
-import teamImg2 from "../img/team/teamImg2.jpg";
-import teamImg3 from "../img/team/teamImg3.jpeg";
-import teamImg4 from "../img/team/teamImg4.jpg";
-import teamImg5 from "../img/team/teamImg5.jpeg";
-import teamImg6 from "../img/team/teamImg6.jpeg";
+import memberImg1 from "../img/team/memberImg1.jpg";
+import memberImg2 from "../img/team/memberImg2.jpg";
+import memberImg3 from "../img/team/memberImg3.jpeg";
+import memberImg4 from "../img/team/memberImg4.jpg";
+import memberImg5 from "../img/team/memberImg5.jpeg";
+import memberImg6 from "../img/team/memberImg6.jpeg";
 
 export const teamMembers = [
   {
     id: 1,
     position: "Head coach",
-    img: teamImg1,
+    img: memberImg1,
     name: "Chaleb",
     surname: "Walsh",
   },
   {
     id: 2,
     position: "Head coach",
-    img: teamImg2,
+    img: memberImg2,
     name: "Evelyne",
     surname: "Foster",
   },
   {
     id: 3,
     position: "Assistant coach",
-    img: teamImg3,
+    img: memberImg3,
     name: "Ethan",
     surname: "Garcia",
   },
   {
     id: 4,
     position: "Assistant coach",
-    img: teamImg4,
+    img: memberImg4,
     name: "Megan",
     surname: "Fox",
   },
   {
     id: 5,
     position: "Technique coach",
-    img: teamImg5,
+    img: memberImg5,
     name: "Liam",
     surname: "Peaty",
   },
   {
     id: 6,
     position: "Strength & Conditioning coach",
-    img: teamImg6,
+    img: memberImg6,
     name: "Matthew",
     surname: "Finke",
   },

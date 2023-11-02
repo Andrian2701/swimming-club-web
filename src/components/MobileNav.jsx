@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { RiCloseFill } from "react-icons/ri";
-import "../styles/Header.scss";
+import "../styles/components/MobileNav.scss";
 
 export default function MobileNav({ hamburgerMenu, setHamburgerMenuHandler }) {
   return (

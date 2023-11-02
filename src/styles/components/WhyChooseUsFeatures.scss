@@ -1,0 +1,88 @@
+@use "../global" as *;
+
+.why-choose-us-features {
+  gap: 2.8rem;
+  margin-top: 3rem;
+
+  @media (max-width: $query-md) {
+    @include display-flex(flex, column, center, auto);
+  }
+
+  @media (min-width: $query-md) {
+    @include display-flex(flex, auto, auto, space-between);
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $query-xl) {
+    display: flex;
+  }
+
+  .feature {
+    width: 100%;
+    padding: 2rem 2rem 2rem 2rem;
+    box-shadow: 0px 25px 15px -20px rgba(135, 138, 170, 0.2);
+    border-radius: 3px;
+
+    @media (min-width: $query-md) {
+      width: 46%;
+    }
+
+    @media (min-width: $query-xl) {
+      width: 21%;
+    }
+
+    h4 {
+      font-weight: $fw-600;
+      font-size: 1.1rem;
+      color: $color-purple;
+
+      @media (max-width: $query-md) {
+        font-size: 1rem;
+      }
+    }
+
+    div {
+      text-align: center;
+      margin-top: 1.5rem;
+      line-height: 1.5rem;
+      font-weight: $fw-600;
+      color: $color-dark-black;
+    }
+
+    &.white {
+      @extend .feature;
+      background-color: $color-white;
+
+      @media (min-width: $query-xl) {
+        margin-top: 3rem;
+      }
+    }
+
+    &.green {
+      @extend .feature;
+      background-color: transparent;
+      border: 1px solid $color-green;
+
+      @media (min-width: $query-xl) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &.purple {
+      @extend .feature;
+      background-color: $color-purple;
+
+      h4 {
+        color: $color-white;
+      }
+
+      div {
+        color: $color-white;
+      }
+
+      @media (min-width: $query-xl) {
+        margin-top: 3rem;
+      }
+    }
+  }
+}

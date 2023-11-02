@@ -1,0 +1,98 @@
+@use "../global" as *;
+
+.team-members {
+  gap: 2.8rem;
+  margin-top: 3rem;
+
+  @media (max-width: $query-md) {
+    @include display-flex(flex, column, center, auto);
+  }
+
+  @media (min-width: $query-md) {
+    @include display-flex(flex, auto, auto, space-between);
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $query-xl) {
+    display: flex;
+  }
+
+  .member {
+    width: 100%;
+    padding: 2rem 2rem 2rem 2rem;
+    transition: 0.3s;
+    background-color: $color-grey;
+    cursor: pointer;
+
+    @media (min-width: $query-md) {
+      width: 46.5%;
+    }
+
+    @media (min-width: $query-xl) {
+      width: 21%;
+    }
+
+    &:hover {
+      transform: translate(0, -0.5rem);
+    }
+
+    span {
+      color: $color-dark-black;
+      font-weight: $fw-700;
+      font-size: 0.9rem;
+    }
+
+    .img-container {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      @include display-flex(flex, auto, center, center);
+
+      img {
+        max-width: 12rem;
+        height: 12rem;
+        border-radius: 10rem;
+        object-fit: cover;
+        object-position: 55%;
+
+        @media (min-width: $query-xl) {
+          max-width: 9.5rem;
+          height: 9.5rem;
+        }
+      }
+    }
+
+    div {
+      @include display-flex(flex, auto, center, space-between);
+
+      span {
+        font-weight: $fw-600;
+        font-size: 1.1rem;
+        color: $color-light-black;
+      }
+
+      .go-right-icon {
+        background-color: $color-white;
+        font-weight: $fw-700;
+        border-radius: 10rem;
+        padding: 0.7rem 0.7rem;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      .go-right-icon {
+        color: $color-white;
+        background-color: $color-purple;
+      }
+    }
+  }
+}
+
+.meet-team-btn {
+  text-align: center;
+  margin-top: 4rem;
+
+  @include purple-btn;
+}

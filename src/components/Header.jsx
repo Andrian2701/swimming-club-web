@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CgMenuRightAlt } from "react-icons/cg";
 import MobileNav from "./MobileNav";
 import logoImg from "../img/logo/logo.png";
-import "../styles/Header.scss";
+import "../styles/components/Header.scss";
 
 export default function Header() {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
@@ -41,11 +41,9 @@ export default function Header() {
         <div className="cta-container">
           {mobLayout && (
             <div className="hamburger-menu">
-              <i>
-                <CgMenuRightAlt
-                  onClick={() => setHamburgerMenu(!hamburgerMenu)}
-                />
-              </i>
+              <CgMenuRightAlt
+                onClick={() => setHamburgerMenu(!hamburgerMenu)}
+              />
             </div>
           )}
           <Link to="/">Sign up</Link>

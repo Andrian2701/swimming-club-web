@@ -1,9 +1,13 @@
-import { teamMembers } from "../const/teamMembers";
+import { useMemo } from "react";
+import { teamMembers } from "../data/teamMembers";
 import { PiCaretRightBold } from "react-icons/pi";
-import "../styles/Team.scss";
+import "../styles/components/TeamMembers.scss";
 
-export default function TeamMember() {
-  const filteredMembers = teamMembers.filter((member) => member.id < 5);
+export default function TeamMembers() {
+  const filteredMembers = useMemo(
+    () => teamMembers.filter((member) => member.id < 5),
+    []
+  );
 
   return (
     <>

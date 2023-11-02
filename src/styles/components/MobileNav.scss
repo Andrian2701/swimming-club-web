@@ -1,0 +1,53 @@
+@use "../global" as *;
+
+.mob-nav {
+  background: $color-white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 1000;
+  transition: all 0.4s ease-in-out;
+  @include display-flex(flex, column, auto, auto);
+
+  i {
+    transition: all 0.3s;
+    font-size: 2rem;
+    position: absolute;
+    top: 2.2rem;
+    right: 2.8rem;
+    cursor: pointer;
+    color: $color-purple;
+  }
+
+  .mob-nav-links {
+    height: 100%;
+
+    ul {
+      height: 100%;
+      list-style: none;
+      gap: 2.8rem;
+      @include display-flex(flex, column, center, center);
+
+      li {
+        a {
+          text-decoration: none;
+          color: $color-dark-black;
+          cursor: pointer;
+          font-weight: $fw-700;
+          font-size: 1.2rem;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $color-purple;
+          }
+        }
+      }
+    }
+  }
+
+  &.open {
+    right: 0;
+  }
+}

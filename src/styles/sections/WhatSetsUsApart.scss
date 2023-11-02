@@ -1,0 +1,36 @@
+@use "../global" as *;
+
+.what-sets-us-apart {
+  padding: 5.5rem 8vw 5.5rem 8vw;
+  background-color: $color-white;
+
+  @media (min-width: $query-lg) {
+    display: flex;
+  }
+
+  .header {
+    margin-top: 2.7rem;
+
+    @media (min-width: $query-lg) {
+      width: 50%;
+    }
+
+    span {
+      letter-spacing: 0.1em;
+      font-size: 0.8rem;
+      font-weight: $fw-600;
+      color: $color-purple;
+    }
+
+    h2 {
+      color: $color-dark-black;
+      font-size: $h2-big;
+      font-weight: $fw-600;
+      margin-top: 0.8rem;
+
+      @media (max-width: $query-md) {
+        font-size: $h2-small;
+      }
+    }
+  }
+}

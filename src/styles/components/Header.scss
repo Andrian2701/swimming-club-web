@@ -1,0 +1,88 @@
+@use "../global" as *;
+
+header {
+  width: 100%;
+
+  nav {
+    padding: 2rem 3rem;
+    @include display-flex(flex, auto, center, space-between);
+
+    @media (max-width: $query-lg) {
+      padding: 1rem 3rem;
+    }
+
+    .logo {
+      width: 8rem;
+
+      a {
+        img {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .nav-links {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 2.8rem;
+
+        a {
+          text-decoration: none;
+          transition: all 0.3s;
+          font-weight: $fw-700;
+          font-size: $a-size;
+          color: $color-dark-black;
+          cursor: pointer;
+
+          &:hover {
+            color: $color-purple;
+          }
+        }
+      }
+
+      @media (max-width: $query-lg) {
+        display: none;
+      }
+    }
+
+    .cta-container {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        padding: 0.8rem 2rem;
+        font-weight: $fw-700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.3s;
+        color: $color-purple;
+        border-radius: 10rem;
+        border: 2px solid $color-purple;
+        cursor: pointer;
+
+        @media (max-width: $query-md) {
+          display: none;
+        }
+
+        &:hover {
+          background-color: $color-purple;
+          color: $color-white;
+        }
+      }
+    }
+
+    .hamburger-menu {
+      display: flex;
+      justify-content: center;
+
+      color: $color-purple;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      @include display-flex(flex, auto, center, auto);
+    }
+  }
+}

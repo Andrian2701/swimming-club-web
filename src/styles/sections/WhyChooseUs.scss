@@ -1,0 +1,35 @@
+@use "../global/" as *;
+
+.why-choose-us {
+  padding: 5.5rem 8vw 5.5rem 8vw;
+  background-color: $color-grey;
+
+  .header {
+    text-align: center;
+
+    span {
+      letter-spacing: 0.1em;
+      color: $color-purple;
+      font-size: 0.8rem;
+      font-weight: $fw-600;
+    }
+
+    h2 {
+      color: $color-dark-black;
+      font-size: $h2-big;
+      font-weight: $fw-600;
+      margin-top: 0.8rem;
+
+      @media (max-width: $query-md) {
+        font-size: $h2-small;
+      }
+    }
+
+    p {
+      margin-top: 2.5rem;
+      line-height: 1.5rem;
+      font-weight: $fw-400;
+      color: $color-light-black;
+    }
+  }
+}

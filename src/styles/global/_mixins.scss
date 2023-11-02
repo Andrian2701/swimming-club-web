@@ -1,0 +1,28 @@
+@mixin display-flex($display, $flex-direction, $align-items, $justify-content) {
+  display: $display;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin purple-btn {
+  a {
+    padding: 0.9rem 2rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: #ffffff;
+    background-color: #4f2ec9;
+    border-radius: 10rem;
+    border: 2px solid #4f2ec9;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #4f2ec9;
+      background-color: transparent;
+      border: 2px solid #4f2ec9;
+    }
+  }
+}

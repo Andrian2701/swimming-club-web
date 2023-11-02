@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import TeamMember from "./TeamMember";
-import "../styles/Team.scss";
+import TeamMembers from "./TeamMembers";
+import "../styles/sections/Team.scss";
 
 export default function Team() {
   return (
@@ -15,7 +15,7 @@ export default function Team() {
         </p>
       </div>
       <div className="team-members">
-        <TeamMember />
+        <TeamMembers />
       </div>
       <div className="meet-team-btn">
         <Link>Meet the team</Link>

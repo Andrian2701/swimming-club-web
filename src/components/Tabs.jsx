@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { tabsData } from "../const/contentData";
-import "../styles/TabbedContent.scss";
+import { tabs } from "../data/tabs";
+import "../styles/components/Tabs.scss";
 
 export default function Tab() {
-  const [selectedTab, setSelectedTab] = useState(tabsData[0]);
+  const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
-    <div className="tab-content">
+    <div className="tabs">
       <div className="tab-list">
         <ul>
-          {tabsData.map((tab) => (
+          {tabs.map((tab) => (
             <li
               key={tab.id}
               className={`tab-item ${
@@ -24,7 +24,7 @@ export default function Tab() {
           ))}
         </ul>
       </div>
-      <div className="tab-text">
+      <div className="tab-content">
         <h4>{selectedTab.heading}</h4>
         <div>{selectedTab.description}</div>
       </div>
