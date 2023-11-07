@@ -1,10 +1,10 @@
-import Tabs from "./Tabs";
+import Tabs from "../components/Tabs";
 import img1 from "../img/other-img/Img1.jpg";
 import img2 from "../img/other-img/Img2.jpeg";
-import img3 from "../img/other-img/Img3.jpeg";
+import img3 from "../img/other-img/img3.jpeg";
 import "../styles/sections/WhatSetsUsApart.scss";
 
-export default function WhatSetsUsApart() {
+const WhatSetsUsApart = () => {
   return (
     <section className="what-sets-us-apart">
       <div className="header">
@@ -19,4 +19,6 @@ export default function WhatSetsUsApart() {
       </div>
     </section>
   );
-}
+};
+
+export default WhatSetsUsApart;

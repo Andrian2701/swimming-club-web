@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import TeamMembers from "./TeamMembers";
+import TeamMembers from "../components/TeamMembers";
 import "../styles/sections/Team.scss";
 
-export default function Team() {
+const Team = () => {
   return (
     <section className="our-team">
       <div className="header">
@@ -22,4 +22,6 @@ export default function Team() {
       </div>
     </section>
   );
-}
+};
+
+export default Team;

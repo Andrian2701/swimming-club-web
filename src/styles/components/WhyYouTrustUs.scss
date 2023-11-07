@@ -1,0 +1,57 @@
+@use "../global" as *;
+
+.why-trust-us {
+  margin-top: 3rem;
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .dynamic-metrics {
+    margin-top: 3rem;
+    gap: 2.7rem;
+
+    @media (max-width: 768px), (min-width: 992px) {
+      @include display-flex(flex, column, auto, center);
+    }
+
+    @media (min-width: 768px), (max-width: 992px) {
+      @include display-flex(flex, auto, auto, space-between);
+    }
+
+    .test1 {
+      position: relative;
+
+      div {
+        background-color: $color-white;
+        width: 30px;
+        height: 30px;
+        border-radius: 10rem;
+      }
+
+      span {
+        font-size: 2.2rem;
+        position: absolute;
+        bottom: 2.3rem;
+
+        @media (max-width: 500px) {
+          font-size: 1.8rem;
+        }
+      }
+
+      h5 {
+        font-size: 15px;
+        margin-top: 0.7rem;
+      }
+    }
+
+    .test2 {
+      @extend .test1;
+    }
+
+    .test3 {
+      @extend .test1;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@use "../global" as *;
+
+.training-overview {
+  padding: 5.5rem 8vw 5.5rem 8vw;
+  background-color: $color-grey;
+
+  @media (min-width: $query-lg) {
+    @include display-flex(flex, auto, auto, center);
+  }
+
+  .images {
+    width: 100%;
+    gap: 2.5rem;
+
+    @media (min-width: $query-md) {
+      height: 30rem;
+    }
+
+    @media (min-width: $query-lg) {
+      width: 50%;
+      @include display-flex(flex, column, auto, auto);
+      gap: 3rem;
+      height: 100%;
+    }
+
+    @media (max-width: $query-lg) {
+      @include display-flex(flex, auto, auto, space-between);
+    }
+
+    .img1 {
+      width: 45%;
+      min-height: 18rem;
+      object-fit: cover;
+      object-position: 50% 50%;
+
+      @media (min-width: $query-md), (max-width: $query-md) {
+        margin-top: 3rem;
+      }
+
+      @media (min-width: $query-lg) {
+        margin-top: 0;
+        width: 80%;
+        float: left;
+        height: 33rem;
+      }
+    }
+
+    .img2 {
+      width: 45%;
+      min-height: 18rem;
+      object-fit: cover;
+      object-position: 30% 50%;
+
+      @media (min-width: $query-md), (max-width: $query-md) {
+        margin-bottom: 3rem;
+      }
+
+      @media (min-width: $query-lg) {
+        width: 80%;
+        float: left;
+        margin-bottom: 0rem;
+        height: 33rem;
+      }
+    }
+  }
+
+  .header {
+    margin-top: 3rem;
+
+    @media (min-width: $query-lg) {
+      width: 50%;
+      margin-top: 0;
+    }
+
+    span {
+      letter-spacing: 0.1em;
+      color: $color-purple;
+      font-size: 0.8rem;
+      font-weight: $fw-600;
+    }
+
+    h2 {
+      color: $color-dark-black;
+      font-size: $h2-big;
+      font-weight: $fw-600;
+      margin-top: 0.8rem;
+
+      @media (max-width: $query-sm) {
+        font-size: $h2-small;
+      }
+    }
+
+    p {
+      margin-top: 2.5rem;
+      line-height: 1.5rem;
+      font-weight: $fw-400;
+      color: $color-light-black;
+    }
+  }
+}

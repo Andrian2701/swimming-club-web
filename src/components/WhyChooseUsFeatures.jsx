@@ -1,7 +1,7 @@
 import { features } from "../data/features";
 import "../styles/components/WhyChooseUsFeatures.scss";
 
-export default function WhyChooseUsFeatures() {
+const WhyChooseUsFeatures = () => {
   return (
     <>
       {features.map((item, idx) => (
@@ -17,4 +17,6 @@ export default function WhyChooseUsFeatures() {
       ))}
     </>
   );
-}
+};
+
+export default WhyChooseUsFeatures;

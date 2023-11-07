@@ -3,7 +3,7 @@ import { teamMembers } from "../data/teamMembers";
 import { PiCaretRightBold } from "react-icons/pi";
 import "../styles/components/TeamMembers.scss";
 
-export default function TeamMembers() {
+const TeamMembers = () => {
   const filteredMembers = useMemo(
     () => teamMembers.filter((member) => member.id < 5),
     []
@@ -31,4 +31,6 @@ export default function TeamMembers() {
       ))}
     </>
   );
-}
+};
+
+export default TeamMembers;

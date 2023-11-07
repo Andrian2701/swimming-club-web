@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { tabs } from "../data/tabs";
 import "../styles/components/Tabs.scss";
 
-export default function Tab() {
+const Tab = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
@@ -33,4 +33,6 @@ export default function Tab() {
       </div>
     </div>
   );
-}
+};
+
+export default Tab;

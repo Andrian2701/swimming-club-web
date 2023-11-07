@@ -1,17 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { MobileMenu } from "./MobileMenu";
 import { CgMenuRightAlt } from "react-icons/cg";
-import MobileNav from "./MobileNav";
 import logoImg from "../img/logo/logo.png";
 import "../styles/components/Header.scss";
 
-export default function Header() {
+export const Header = () => {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const [mobLayout, setMobLayout] = useState(window.innerWidth <= 992);
 
-  window.addEventListener("resize", () => {
-    setMobLayout(window.innerWidth <= 992);
-  });
+  useEffect(() => {
+    const handleResize = () => {
+      setMobLayout(window.innerWidth <= 992);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const setHamburgerMenuHandler = (val) => {
     setHamburgerMenu(val);
@@ -39,20 +47,20 @@ export default function Header() {
           </ul>
         </div>
         <div className="cta-container">
-          {mobLayout && (
+          {mobLayout ? (
             <div className="hamburger-menu">
               <CgMenuRightAlt
                 onClick={() => setHamburgerMenu(!hamburgerMenu)}
               />
             </div>
-          )}
+          ) : null}
           <Link to="/">Sign up</Link>
         </div>
       </nav>
-      <MobileNav
+      <MobileMenu
         hamburgerMenu={hamburgerMenu}
         setHamburgerMenuHandler={setHamburgerMenuHandler}
       />
     </header>
   );
-}
+};

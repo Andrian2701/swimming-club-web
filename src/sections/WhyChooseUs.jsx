@@ -1,7 +1,7 @@
-import WhyChooseUsFeatures from "./WhyChooseUsFeatures";
+import WhyChooseUsFeatures from "../components/WhyChooseUsFeatures";
 import "../styles/sections/WhyChooseUs.scss";
 
-export default function WhyChooseUs() {
+const WhyChooseUs = () => {
   return (
     <section className="why-choose-us">
       <div className="header">
@@ -20,4 +20,6 @@ export default function WhyChooseUs() {
       </div>
     </section>
   );
-}
+};
+
+export default WhyChooseUs;

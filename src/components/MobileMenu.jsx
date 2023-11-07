@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { RiCloseFill } from "react-icons/ri";
-import "../styles/components/MobileNav.scss";
+import "../styles/components/MobileMenu.scss";
 
-export default function MobileNav({ hamburgerMenu, setHamburgerMenuHandler }) {
+export const MobileMenu = ({ hamburgerMenu, setHamburgerMenuHandler }) => {
   return (
-    <div className={`mob-nav ${hamburgerMenu ? "open" : ""}`}>
+    <div className={`mobile-menu ${hamburgerMenu ? "open" : ""}`}>
       <i>
         <RiCloseFill onClick={() => setHamburgerMenuHandler(!hamburgerMenu)} />
       </i>
-      <div className="mob-nav-links">
+      <div className="mobile-menu-links">
         <ul>
           <li>
             <Link to="/">Team</Link>
@@ -26,4 +26,4 @@ export default function MobileNav({ hamburgerMenu, setHamburgerMenuHandler }) {
       </div>
     </div>
   );
-}
+};
