@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { MobileMenu } from "./MobileMenu";
 import { CgMenuRightAlt } from "react-icons/cg";
-import logoImg from "../img/logo/logo.png";
-import "../styles/components/Header.scss";
+import { headerLinks } from "../../data/headerLinks";
+import MobileMenu from "../MobileMenu";
+import logoImg from "../../assests/imgs/logo/logo.png";
+import "../../styles/components/Header.scss";
 
-export const Header = () => {
+const Header = () => {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
-  const [mobLayout, setMobLayout] = useState(window.innerWidth <= 992);
+  const [mobileLayout, setMobileLayout] = useState(window.innerWidth <= 992);
 
   useEffect(() => {
     const handleResize = () => {
-      setMobLayout(window.innerWidth <= 992);
+      setMobileLayout(window.innerWidth <= 992);
     };
 
     window.addEventListener("resize", handleResize);
@@ -30,24 +31,20 @@ export const Header = () => {
       <nav>
         <div className="logo">
           <Link to="/">
-            <img src={logoImg} alt="logo-img" />
+            <img src={logoImg} alt="logo" />
           </Link>
         </div>
-        <div className="nav-links">
+        <div className="links">
           <ul>
-            <li>
-              <Link to="/">Team</Link>
-            </li>
-            <li>
-              <Link to="/">Courses</Link>
-            </li>
-            <li>
-              <Link to="/">Contact</Link>
-            </li>
+            {headerLinks.map((link) => (
+              <li key={link.id}>
+                <Link to={link.to}>{link.text}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="cta-container">
-          {mobLayout ? (
+          {mobileLayout ? (
             <div className="hamburger-menu">
               <CgMenuRightAlt
                 onClick={() => setHamburgerMenu(!hamburgerMenu)}
@@ -64,3 +61,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;

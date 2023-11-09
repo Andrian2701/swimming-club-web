@@ -56,7 +56,7 @@
           height: 6px;
           background-color: $color-purple;
 
-          @media (max-width: 467px) {
+          @media (max-width: $query-sm) {
             margin-left: 0;
           }
 

@@ -1,21 +1,21 @@
 import { useMemo } from "react";
-import { teamMembers } from "../data/teamMembers";
+import { teamMembers } from "../../data/teamMembers";
 import { PiCaretRightBold } from "react-icons/pi";
-import "../styles/components/TeamMembers.scss";
+import "../../styles/components/TeamMembers.scss";
 
-const TeamMembers = () => {
-  const filteredMembers = useMemo(
+const TeamMember = () => {
+  const singleMember = useMemo(
     () => teamMembers.filter((member) => member.id < 5),
     []
   );
 
   return (
     <>
-      {filteredMembers.map((member) => (
+      {singleMember.map((member) => (
         <div className="member" key={member.id}>
           <span>{member.position}</span>
           <div className="img-container">
-            <img src={member.img} alt="member-img1" />
+            <img src={member.img} alt="member" />
           </div>
           <div>
             <span>
@@ -33,4 +33,4 @@ const TeamMembers = () => {
   );
 };
 
-export default TeamMembers;
+export default TeamMember;

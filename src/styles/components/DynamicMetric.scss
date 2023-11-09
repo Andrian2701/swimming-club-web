@@ -20,7 +20,7 @@
       @include display-flex(flex, auto, auto, space-between);
     }
 
-    .test1 {
+    .metric1 {
       position: relative;
 
       div {
@@ -46,12 +46,12 @@
       }
     }
 
-    .test2 {
-      @extend .test1;
+    .metric2 {
+      @extend .metric1;
     }
 
-    .test3 {
-      @extend .test1;
+    .metric3 {
+      @extend .metric1;
     }
   }
 }

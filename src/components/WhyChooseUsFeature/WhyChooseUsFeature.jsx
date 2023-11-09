@@ -1,7 +1,7 @@
-import { features } from "../data/features";
-import "../styles/components/WhyChooseUsFeatures.scss";
+import { features } from "../../data/features";
+import "../../styles/components/WhyChooseUsFeature.scss";
 
-const WhyChooseUsFeatures = () => {
+const WhyChooseUsFeature = () => {
   return (
     <>
       {features.map((item, idx) => (
@@ -19,4 +19,4 @@ const WhyChooseUsFeatures = () => {
   );
 };
 
-export default WhyChooseUsFeatures;
+export default WhyChooseUsFeature;

@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 .training-overview {
-  padding: 5.5rem 8vw 5.5rem 8vw;
+  padding: 5.5rem 8vw 0 8vw;
   background-color: $color-grey;
 
   @media (min-width: $query-lg) {

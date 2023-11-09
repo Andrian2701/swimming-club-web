@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { tabs } from "../data/tabs";
-import "../styles/components/Tabs.scss";
+import { tabs } from "../../data/tabs";
+import "../../styles/components/Tabs.scss";
 
 const Tab = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
