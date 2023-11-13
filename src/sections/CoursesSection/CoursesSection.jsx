@@ -13,7 +13,7 @@ const CoursesSection = () => {
         <CoursesSlider />
         <div className="full-list">
           <p>
-            See more classes. Go to the <Link>full list</Link>
+            See more. Go to the <Link>full list</Link>
           </p>
         </div>
       </div>

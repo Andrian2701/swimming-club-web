@@ -1,27 +1,36 @@
-import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { IoMdPeople } from "react-icons/io";
 import { AiFillFolder } from "react-icons/ai";
 import { MdPlayLesson } from "react-icons/md";
-import Img5 from "../../assests/imgs/sections/Img5.jpeg";
+import courses from "../../data/courses";
+import SwiperButtons from "../SwiperButtons";
+import "swiper/css";
 import "../../styles/components/CoursesSlider.scss";
-
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
-import Swiper from "swiper";
-import SwiperSlide from "swiper";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import "swiper/css";
 
 const CoursesSlider = () => {
   return (
-    <>
-      <div className="courses-slider">
-        <div className="course">
+    <Swiper
+      slidesPerView={3}
+      spaceBetween={30}
+      breakpoints={{
+        280: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1100: {
+          slidesPerView: 3,
+        },
+      }}
+      className="courses-slider"
+    >
+      {courses.map((course) => (
+        <SwiperSlide key={course.id}>
           <div className="img-container">
-            <img src={Img5} alt="course-img" />
+            <img src={course.img} alt="course-img" />
             <div className="price-tag">
-              <span>$200.00</span>
+              <span>${course.price}</span>
               <p>/ person</p>
             </div>
           </div>
@@ -31,20 +40,17 @@ const CoursesSlider = () => {
                 <i>
                   <AiFillFolder />
                 </i>
-                <span>Swimming Course</span>
+                <span>{course.classType}</span>
               </div>
-              <h2>Pro Swimmers: 12-20 Years</h2>
-              <p>
-                Mastering the technique in four swimming styles: freestyle,
-                backstorke, breastroke and butterfy. Constantly on the move.
-              </p>
+              <h2>{course.classTitle}</h2>
+              <p>{course.description}</p>
             </div>
             <div className="addition">
               <div>
                 <i>
                   <IoMdPeople />
                 </i>
-                <span>2 entrolled</span>
+                <span>{course.entrolled} entrolled</span>
               </div>
               <div>
                 <i>
@@ -54,17 +60,12 @@ const CoursesSlider = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </SwiperSlide>
+      ))}
       <div className="slider-btns">
-        <div className="go-left">
-          <PiCaretLeftBold />
-        </div>
-        <div className="go-right">
-          <PiCaretRightBold />
-        </div>
+        <SwiperButtons />
       </div>
-    </>
+    </Swiper>
   );
 };
 

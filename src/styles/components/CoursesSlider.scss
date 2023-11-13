@@ -4,37 +4,29 @@
   margin-top: 3rem;
 
   .courses-slider {
-    @media (max-width: $query-md) {
-      @include display-flex(flex, column, center, auto);
-    }
-
-    @media (min-width: $query-md) {
-      @include display-flex(flex, auto, auto, space-between);
-      flex-wrap: wrap;
-    }
-
-    @media (min-width: $query-xl) {
-      display: flex;
-    }
-
-    .course {
+    .swiper-slide {
       width: 100%;
       transition: 0.3s;
       border-radius: 5px;
       background-color: $color-white;
       cursor: pointer;
 
-      @media (min-width: $query-md) {
-        width: 46.5%;
-      }
-
-      @media (min-width: $query-xl) {
-        width: 21%;
-      }
-
       .img-container {
         height: 17rem;
         position: relative;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          transition: all 0.3s;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
 
         .price-tag {
           display: flex;
@@ -63,24 +55,6 @@
             font-size: 12px;
             opacity: 0.5;
             margin-left: 0.5rem;
-          }
-        }
-
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          border-top-left-radius: 5px;
-          border-top-right-radius: 5px;
-          transition: all 0.3s;
-
-          &:hover {
-            opacity: 0.8;
-          }
-
-          @media (min-width: $query-xl) {
-            max-width: 9.5rem;
-            height: 9.5rem;
           }
         }
       }
