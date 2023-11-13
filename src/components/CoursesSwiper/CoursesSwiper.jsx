@@ -1,17 +1,24 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 import { IoMdPeople } from "react-icons/io";
 import { AiFillFolder } from "react-icons/ai";
 import { MdPlayLesson } from "react-icons/md";
+import SwipeButtons from "../SwipeButtons";
 import courses from "../../data/courses";
-import SwiperButtons from "../SwiperButtons";
 import "swiper/css";
-import "../../styles/components/CoursesSlider.scss";
+import "../../styles/components/CoursesSwiper.scss";
 
-const CoursesSlider = () => {
+const CoursesSwiper = () => {
   return (
     <Swiper
       slidesPerView={3}
       spaceBetween={30}
+      modules={[Pagination, Navigation]}
+      loop={true}
+      navigation={true}
+      pagination={{
+        clickable: true,
+      }}
       breakpoints={{
         280: {
           slidesPerView: 1,
@@ -23,7 +30,7 @@ const CoursesSlider = () => {
           slidesPerView: 3,
         },
       }}
-      className="courses-slider"
+      className="courses-swiper"
     >
       {courses.map((course) => (
         <SwiperSlide key={course.id}>
@@ -40,9 +47,9 @@ const CoursesSlider = () => {
                 <i>
                   <AiFillFolder />
                 </i>
-                <span>{course.classType}</span>
+                <span>{course.courseType}</span>
               </div>
-              <h2>{course.classTitle}</h2>
+              <h2>{course.courseTitle}</h2>
               <p>{course.description}</p>
             </div>
             <div className="addition">
@@ -62,11 +69,11 @@ const CoursesSlider = () => {
           </div>
         </SwiperSlide>
       ))}
-      <div className="slider-btns">
-        <SwiperButtons />
+      <div className="swipe-buttons">
+        <SwipeButtons />
       </div>
     </Swiper>
   );
 };
 
-export default CoursesSlider;
+export default CoursesSwiper;

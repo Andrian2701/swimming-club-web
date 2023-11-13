@@ -1,6 +1,6 @@
 @use "../global" as *;
 
-.our-courses {
+.courses-section {
   padding: 5.5rem 8vw 5.5rem 8vw;
   background-color: $color-grey;
 
@@ -33,56 +33,36 @@
     }
   }
 
-  .slider-btns {
-    @include display-flex(flex, auto, center, center);
-    gap: 1rem;
-    margin-top: 2.5rem;
+  .courses {
+    margin-top: 3rem;
 
-    .go-right {
-      background-color: $color-white;
-      font-weight: $fw-700;
-      border-radius: 10rem;
-      padding: 0.7rem 0.7rem 0.4rem 0.7rem;
-      transition: all 0.3s;
-      cursor: pointer;
+    .full-list-link {
+      margin-top: 2.5rem;
+      text-align: center;
 
-      &:hover {
-        color: $color-white;
-        background-color: $color-purple;
-      }
-    }
+      p {
+        color: $color-light-black;
 
-    .go-left {
-      @extend .go-right;
-    }
-  }
+        a {
+          font-size: $a-size;
+          font-weight: $fw-700;
+          cursor: pointer;
+          color: $color-purple;
+          transition: all 0.3s;
+          text-decoration: none;
+          position: relative;
 
-  .full-list {
-    margin-top: 2.5rem;
-    text-align: center;
-
-    p {
-      color: $color-light-black;
-
-      a {
-        font-size: $a-size;
-        font-weight: $fw-700;
-        cursor: pointer;
-        color: $color-purple;
-        transition: all 0.3s;
-        text-decoration: none;
-        position: relative;
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -5px;
-          left: 53%;
-          transform: translateX(-50%);
-          border-radius: 5rem;
-          width: 50px;
-          height: 1.7px;
-          background-color: $color-purple;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 53%;
+            transform: translateX(-50%);
+            border-radius: 5rem;
+            width: 50px;
+            height: 1.7px;
+            background-color: $color-purple;
+          }
         }
       }
     }

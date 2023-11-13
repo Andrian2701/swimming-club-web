@@ -1,0 +1,25 @@
+@use "../global" as *;
+
+.swipe-buttons {
+  @include display-flex(flex, auto, center, center);
+  gap: 1rem;
+  margin-top: 2.5rem;
+
+  .swipe-left {
+    background-color: $color-white;
+    font-weight: $fw-700;
+    border-radius: 10rem;
+    padding: 0.7rem 0.7rem 0.4rem 0.7rem;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-purple;
+    }
+  }
+
+  .swipe-right {
+    @extend .swipe-left;
+  }
+}
