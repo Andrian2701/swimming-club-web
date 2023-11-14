@@ -4,6 +4,7 @@ import WhyChooseUsSection from "../../sections/WhyChooseUsSection";
 import TeamSection from "../../sections/TeamSection";
 import TrainingOverviewSection from "../../sections/TrainingOverviewSection";
 import CoursesSection from "../../sections/CoursesSection";
+import Footer from "../../components/Footer";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
         <TrainingOverviewSection />
         <CoursesSection />
       </main>
+      <Footer />
     </>
   );
 };

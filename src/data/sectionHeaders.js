@@ -28,4 +28,9 @@ export const sectionHeaders = [
     h2: "Discover Our Classes",
     p: "Whether you're eager to acquaint your little one with the aquatic world or an adult seeking to master swimming, we provide a diverse range of swimming classes tailored to every proficiency level.",
   },
+  // {
+  //   id: 6,
+  //   span: "CLASS FOR YOU",
+  //   h2: "Need Help Figuring Out Which Class Is Right for You or Your Child?",
+  // },
 ];

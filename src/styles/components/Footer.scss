@@ -1,0 +1,239 @@
+@use "../global" as *;
+
+footer {
+  position: relative;
+  background-color: $color-dark-black;
+
+  .footer-top {
+    padding: 5.5rem 8vw 5.5rem 8vw;
+
+    .header {
+      text-align: center;
+
+      span {
+        letter-spacing: 0.1em;
+        color: $color-dark-grey;
+        font-size: 0.8rem;
+        font-weight: $fw-600;
+      }
+
+      h2 {
+        color: $color-white;
+        font-size: $h2-big;
+        font-weight: $fw-600;
+        margin-top: 0.8rem;
+
+        @media (max-width: $query-sm) {
+          font-size: $h2-small;
+        }
+      }
+    }
+
+    .find-class-btn {
+      text-align: center;
+      margin-top: 4rem;
+
+      a {
+        padding: 1rem 2rem;
+        font-weight: 700;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s;
+        color: $color-white;
+        background-color: $color-purple;
+        border-radius: 10rem;
+        border: 2px solid $color-purple;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $color-white;
+          background-color: transparent;
+          border: 2px solid $color-purple;
+        }
+      }
+    }
+  }
+
+  .footer-divider {
+    background-color: #424242;
+    margin: 0 auto;
+    width: 67rem;
+    height: 0.5px;
+
+    @media (max-width: 1200px) {
+      max-width: 85%;
+    }
+  }
+
+  .footer-middle {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 1068px) {
+      width: 100%;
+      @include display-flex(flex, auto, flex-start, flex-start);
+    }
+
+    .contact-info {
+      padding: 5.5rem 8vw 5.5rem 8vw;
+
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+
+      @media (min-width: 1068px) {
+        width: 30%;
+        padding: 5.5rem 2vw 5.5rem 8vw;
+      }
+
+      h3 {
+        font-size: 20px;
+        color: $color-white;
+        font-weight: $fw-600;
+      }
+
+      p {
+        margin-top: 2.5rem;
+        line-height: 1.5rem;
+        font-weight: $fw-400;
+        color: $color-dark-grey;
+      }
+
+      .phone-number {
+        margin-top: 2.5rem;
+        @include display-flex(flex, auto, center, flex-start);
+        gap: 2rem;
+
+        div {
+          width: 50px;
+          font-size: 1.5rem;
+          height: 50px;
+          @include display-flex(flex, auto, center, center);
+          border-radius: 999em;
+          background-color: $color-dark-grey;
+        }
+
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .location-and-hours {
+      padding: 0rem 8vw 5.5rem 8vw;
+
+      @media (min-width: 768px) {
+        padding: 5.5rem 8vw 5.5rem 8vw;
+      }
+
+      @media (min-width: 1068px) {
+        width: 20%;
+        padding: 5.5rem 2vw 5.5rem 0vw;
+      }
+
+      .location {
+        @include display-flex(flex, auto, center, flex-start);
+        gap: 1.5rem;
+
+        div {
+          svg {
+            color: #60606a;
+            width: 1.5rem;
+            height: 1.5rem;
+            @include display-flex(flex, auto, center, center);
+          }
+        }
+
+        div {
+          h3 {
+            color: $color-white;
+            font-weight: $fw-700;
+            font-size: 1rem;
+          }
+
+          p {
+            margin-top: 1.5rem;
+            line-height: 1.5rem;
+            font-weight: $fw-400;
+            color: $color-dark-grey;
+          }
+        }
+      }
+
+      .hours {
+        @extend .location;
+        margin-top: 2.5rem;
+
+        div {
+          svg {
+            color: #60606a;
+            width: 1.4rem;
+            height: 1.4rem;
+            @include display-flex(flex, auto, center, center);
+          }
+        }
+      }
+    }
+
+    .explore-links {
+      padding: 0rem 8vw 2.5rem 8vw;
+      height: 100%;
+
+      @media (min-width: 1068px) {
+        padding: 5.5rem 2vw 5.5rem 0vw;
+        width: 10%;
+      }
+
+      h3 {
+        color: $color-white;
+        font-weight: $fw-700;
+        font-size: 1rem;
+      }
+
+      ul {
+        margin-top: 1.5rem;
+        list-style: none;
+
+        li {
+          a {
+            font-size: 1rem;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            line-height: 2rem;
+            font-weight: $fw-400;
+            color: $color-dark-grey;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+
+    .resources-links {
+      @extend .explore-links;
+
+      @media (min-width: 1068px) {
+        width: 10%;
+      }
+    }
+
+    .blog-links {
+      @extend .explore-links;
+
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+
+      @media (min-width: 1068px) {
+        width: 20%;
+      }
+    }
+  }
+}
