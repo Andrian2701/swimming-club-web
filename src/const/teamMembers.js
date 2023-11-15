@@ -1,9 +1,9 @@
-import teamMember1 from "../assests/imgs/team/teamMember1.jpg";
-import teamMember2 from "../assests/imgs/team/teamMember2.jpg";
-import teamMember3 from "../assests/imgs/team/teamMember3.jpeg";
-import teamMember4 from "../assests/imgs/team/teamMember4.jpg";
-import teamMember5 from "../assests/imgs/team/teamMember5.jpeg";
-import teamMember6 from "../assests/imgs/team/teamMember6.jpeg";
+import teamMember1 from "../assests/img/team/teamMember1.jpg";
+import teamMember2 from "../assests/img/team/teamMember2.jpg";
+import teamMember3 from "../assests/img/team/teamMember3.jpeg";
+import teamMember4 from "../assests/img/team/teamMember4.jpg";
+import teamMember5 from "../assests/img/team/teamMember5.jpeg";
+import teamMember6 from "../assests/img/team/teamMember6.jpeg";
 
 export const teamMembers = [
   {

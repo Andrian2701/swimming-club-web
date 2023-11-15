@@ -2,14 +2,14 @@ import { useMemo } from "react";
 import { textHeadings } from "../const/textHeadings";
 
 export const TextHeading = ({ id }) => {
-  const correspondingHeader = useMemo(
+  const memoizedCorrespondingHeading = useMemo(
     () => textHeadings.filter((header) => header.id === id),
     [id]
   );
 
   return (
     <>
-      {correspondingHeader.map((header) => (
+      {memoizedCorrespondingHeading.map((header) => (
         <div className="text" key={header.id}>
           <span>{header.span}</span>
           <h2>{header.h2}</h2>

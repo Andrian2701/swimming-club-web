@@ -1,6 +1,6 @@
 @use "../global" as *;
 
-.why-trust-us {
+.trust-counts {
   margin-top: 3rem;
 
   h4 {
@@ -8,7 +8,7 @@
     font-weight: 600;
   }
 
-  .dynamic-metrics {
+  .counts {
     margin-top: 3rem;
     gap: 2.7rem;
 
@@ -20,7 +20,7 @@
       @include display-flex(flex, auto, auto, space-between);
     }
 
-    .metric1 {
+    .count1 {
       position: relative;
 
       div {
@@ -46,12 +46,12 @@
       }
     }
 
-    .metric2 {
-      @extend .metric1;
+    .count2 {
+      @extend .count1;
     }
 
-    .metric3 {
-      @extend .metric1;
+    .count3 {
+      @extend .count1;
     }
   }
 }

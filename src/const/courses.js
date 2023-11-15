@@ -1,8 +1,8 @@
-import Froggs from "../assests/imgs/courses/Froggs.avif";
-import Turtles from "../assests/imgs/courses/Turtles.jpeg";
-import Sharks from "../assests/imgs/courses/Sharks.jpeg";
-import Pros from "../assests/imgs/courses/Pros.jpeg";
-import Adults from "../assests/imgs/courses/Adults.jpeg";
+import Froggs from "../assests/img/courses/Froggs.avif";
+import Turtles from "../assests/img/courses/Turtles.jpeg";
+import Sharks from "../assests/img/courses/Sharks.jpeg";
+import Pros from "../assests/img/courses/Pros.jpeg";
+import Adults from "../assests/img/courses/Adults.jpeg";
 
 const courses = [
   {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { NavButton } from "./NavButton";
+import { NavButton } from "../components/NavButton";
 import { exploreNavLinks } from "../const/footerNavLinks";
 import { resourcesNavLinks } from "../const/footerNavLinks";
 import { blogNavLinks } from "../const/footerNavLinks";
@@ -12,7 +12,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className="footer-top">
-        <div className="footer-header">
+        <div className="header">
           <span>CLASS FOR YOU</span>
           <h2>
             Figuring Out Which Class
@@ -75,37 +75,31 @@ export const Footer = () => {
         <div className="explore-links">
           <h3>Explore</h3>
           <ul>
-            {exploreNavLinks
-              ? exploreNavLinks.map((link) => (
-                  <li key={link.text}>
-                    <Link to={link.to}>{link.text}</Link>
-                  </li>
-                ))
-              : null}
+            {exploreNavLinks.map((link) => (
+              <li key={link.text}>
+                <Link to={link.to}>{link.text}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="resources-links">
           <h3>Resources</h3>
           <ul>
-            {resourcesNavLinks
-              ? resourcesNavLinks.map((link) => (
-                  <li key={link.text}>
-                    <Link to={link.to}>{link.text}</Link>
-                  </li>
-                ))
-              : null}
+            {resourcesNavLinks.map((link) => (
+              <li key={link.text}>
+                <Link to={link.to}>{link.text}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="blog-links">
           <h3>Latest From Blog</h3>
           <ul>
-            {blogNavLinks
-              ? blogNavLinks.map((link) => (
-                  <li key={link.text}>
-                    <Link to={link.to}>{link.text}</Link>
-                  </li>
-                ))
-              : null}
+            {blogNavLinks.map((link) => (
+              <li key={link.text}>
+                <Link to={link.to}>{link.text}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -4,7 +4,7 @@ import "../styles/sections/WhyChooseUsSection.scss";
 
 export const WhyChooseUsSection = () => {
   return (
-    <section className="why-choose-us">
+    <section className="why-choose-us-section">
       <div className="header">
         <TextHeading id={2} />
       </div>

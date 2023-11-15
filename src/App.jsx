@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import "../src/styles/global/_boilerplate.scss";
 
-const App = () => {
+export const App = () => {
   return (
     <div className="container">
       <Routes>
@@ -11,5 +11,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;

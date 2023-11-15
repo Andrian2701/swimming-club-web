@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { headerNavLinks } from "../const/headerNavLinks";
 import { CgMenuRightAlt } from "react-icons/cg";
-import { NavButton } from "./NavButton";
-import { MobileMenu } from "./MobileMenu";
-import { Presentation } from "./Presentation";
-import logo from "../assests/imgs/logo/logo.png";
+import { NavButton } from "../components/NavButton";
+import { MobileMenu } from "../components/MobileMenu";
+import { Presentation } from "../components/Presentation";
+import logo from "../assests/img/logo/logo.png";
 import "../styles/components/Header.scss";
 
 export const Header = () => {

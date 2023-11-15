@@ -1,20 +1,20 @@
 import { TextHeading } from "../components/TextHeading";
-import DynamicMetric from "../components/DynamicMetric";
-import img4 from "../assests/imgs/sections/img4.webp";
-import img5 from "../assests/imgs/sections/Img5.jpeg";
+import { TrustCounts } from "../components/TrustCounts";
+import img4 from "../assests/img/sections/Img4.webp";
+import img2 from "../assests/img/sections/Img2.jpeg";
 import "../styles/sections/TrainingOverviewSection.scss";
 
 export const TrainingOverviewSection = () => {
   return (
-    <section className="training-overview">
+    <section className="training-overview-section">
       <div className="images">
-        <img className="img1" src={img4} alt="img1" />
-        <img className="img2" src={img5} alt="img2" />
+        <img className="img2" src={img2} alt="section-img" />
+        <img className="img1" src={img4} alt="section-img" />
       </div>
       <div className="header">
         <TextHeading id={4} />
-        <div className="why-trust-us">
-          <DynamicMetric />
+        <div className="trust-counts">
+          <TrustCounts />
         </div>
       </div>
     </section>

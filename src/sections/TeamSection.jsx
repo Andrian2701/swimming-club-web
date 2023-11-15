@@ -5,7 +5,7 @@ import "../styles/sections/TeamSection.scss";
 
 export const TeamSection = () => {
   return (
-    <section className="our-team">
+    <section className="team-section">
       <div className="header">
         <TextHeading id={3} />
       </div>
