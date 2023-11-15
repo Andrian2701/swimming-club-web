@@ -50,4 +50,41 @@
   &.open {
     right: 0;
   }
+
+  .contact-info {
+    position: absolute;
+    bottom: 2.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .location {
+      @include display-flex(flex, auto, center, center);
+      gap: 1rem;
+      margin-left: 2rem;
+
+      div {
+        width: 30px;
+        font-size: 1.3rem;
+        height: 30px;
+        @include display-flex(flex, auto, center, center);
+        border-radius: 999em;
+        color: $color-purple;
+        background-color: $color-white;
+      }
+
+      p {
+        margin-top: 0;
+        font-size: 0.7rem;
+        font-weight: $fw-700;
+        color: $color-light-black;
+      }
+    }
+
+    .gmail {
+      @extend .location;
+      margin-right: 2rem;
+    }
+  }
 }

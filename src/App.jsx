@@ -1,10 +1,15 @@
-import HomePage from "./pages/HomePage/HomePage";
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
 import "../src/styles/global/_boilerplate.scss";
 
-export default function App() {
+const App = () => {
   return (
     <div className="container">
-      <HomePage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </div>
   );
-}
+};
+
+export default App;

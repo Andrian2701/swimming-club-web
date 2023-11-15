@@ -75,14 +75,15 @@ header {
     }
 
     .hamburger-menu {
-      display: flex;
-      justify-content: center;
-
       color: $color-purple;
       font-size: 2rem;
       cursor: pointer;
       transition: all 0.3s;
-      @include display-flex(flex, auto, center, auto);
+      @include display-flex(flex, auto, center, center);
+
+      @media (min-width: 992px) {
+        display: none;
+      }
     }
   }
 }

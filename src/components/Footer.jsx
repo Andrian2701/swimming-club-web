@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
+import { NavButton } from "./NavButton";
+import { exploreNavLinks } from "../const/footerNavLinks";
+import { resourcesNavLinks } from "../const/footerNavLinks";
+import { blogNavLinks } from "../const/footerNavLinks";
 import { AiOutlineMobile } from "react-icons/ai";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { LuClock3 } from "react-icons/lu";
-import { exploreLinks } from "../data/footerLinks";
-import { resourcesLinks } from "../data/footerLinks";
-import { blogLinks } from "../data/footerLinks";
 import "../styles/components/Footer.scss";
 
-function Footer() {
+export const Footer = () => {
   return (
     <footer>
       <div className="footer-top">
-        <div className="header">
+        <div className="footer-header">
           <span>CLASS FOR YOU</span>
           <h2>
             Figuring Out Which Class
@@ -20,7 +21,7 @@ function Footer() {
           </h2>
         </div>
         <div className="find-class-btn">
-          <Link to="#">Find a class for me</Link>
+          <NavButton id={5} />
         </div>
       </div>
       <div className="footer-divider"></div>
@@ -74,9 +75,9 @@ function Footer() {
         <div className="explore-links">
           <h3>Explore</h3>
           <ul>
-            {exploreLinks
-              ? exploreLinks.map((link) => (
-                  <li key={link.id}>
+            {exploreNavLinks
+              ? exploreNavLinks.map((link) => (
+                  <li key={link.text}>
                     <Link to={link.to}>{link.text}</Link>
                   </li>
                 ))
@@ -86,9 +87,9 @@ function Footer() {
         <div className="resources-links">
           <h3>Resources</h3>
           <ul>
-            {resourcesLinks
-              ? resourcesLinks.map((link) => (
-                  <li key={link.id}>
+            {resourcesNavLinks
+              ? resourcesNavLinks.map((link) => (
+                  <li key={link.text}>
                     <Link to={link.to}>{link.text}</Link>
                   </li>
                 ))
@@ -98,9 +99,9 @@ function Footer() {
         <div className="blog-links">
           <h3>Latest From Blog</h3>
           <ul>
-            {blogLinks
-              ? blogLinks.map((link) => (
-                  <li key={link.id}>
+            {blogNavLinks
+              ? blogNavLinks.map((link) => (
+                  <li key={link.text}>
                     <Link to={link.to}>{link.text}</Link>
                   </li>
                 ))
@@ -110,6 +111,4 @@ function Footer() {
       </div>
     </footer>
   );
-}
-
-export default Footer;
+};

@@ -1,8 +1,6 @@
 @use "../global" as *;
 
 .tabs {
-  margin-top: 2.5rem;
-
   .tab-list {
     margin-top: 2.5rem;
 
@@ -69,7 +67,7 @@
   }
 
   .tab-content {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 
     h4 {
       font-weight: $fw-600;
@@ -90,16 +88,18 @@
   }
 
   .learn-more-btn {
-    margin-top: 4rem;
-
+    @include display-flex(flex, auto, center, auto);
+    margin-top: 3rem;
+    height: 3.5rem;
     @include purple-btn;
   }
 }
 
 .imgs {
   position: relative;
+  margin-top: 0;
 
-  @media (max-width: $query-sm), (min-width: $query-sm) {
+  @media (min-width: $query-sm), (max-width: $query-sm) {
     height: 29.5rem;
     margin-top: 4rem;
   }
@@ -110,11 +110,11 @@
   }
 
   @media (min-width: $query-lg) {
-    margin-top: 2.7rem;
     width: 50%;
     gap: 3rem;
     height: 100%;
     @include display-flex(flex, column, center, center);
+    margin-top: 0;
   }
 
   .img1 {

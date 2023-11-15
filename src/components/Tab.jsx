@@ -1,0 +1,40 @@
+import { useState } from "react";
+import { NavButton } from "./NavButton";
+import { tabs } from "../const/tabs";
+import "../styles/components/Tabs.scss";
+
+export const Tab = () => {
+  const [selectedTab, setSelectedTab] = useState(tabs[0]);
+
+  const handleSelectedTeb = (val) => {
+    setSelectedTab(val);
+  };
+
+  return (
+    <div className="tabs">
+      <div className="tab-list">
+        <ul>
+          {tabs.map((tab) => (
+            <li
+              key={tab.title}
+              className={`tab-item ${
+                selectedTab.title === tab.title ? "active" : "inactive"
+              }`}
+              onClick={() => handleSelectedTeb(tab)}
+            >
+              {tab.title}
+              <div></div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="tab-content">
+        <h4>{selectedTab.heading}</h4>
+        <div>{selectedTab.description}</div>
+      </div>
+      <div className="learn-more-btn">
+        <NavButton id={3} />
+      </div>
+    </div>
+  );
+};
