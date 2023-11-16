@@ -4,6 +4,27 @@ footer {
   position: relative;
   background-color: $color-dark-black;
 
+  .scroll-up-btn {
+    right: 52px;
+    bottom: 60px;
+    width: 45px;
+    height: 45px;
+    z-index: 1000;
+    position: fixed;
+    font-size: 1.4rem;
+    border-radius: 999em;
+    @include display-flex(flex, auto, center, center);
+    transition: all 0.3s ease-in-out;
+    color: $color-white;
+    background-color: $color-purple;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-dark-black;
+      background-color: $color-white;
+    }
+  }
+
   .footer-top {
     padding: 5.5rem 8vw 5.5rem 8vw;
 
@@ -233,6 +254,51 @@ footer {
 
       @media (min-width: 1068px) {
         width: 20%;
+      }
+    }
+  }
+
+  .footer-bottom {
+    @media (min-width: 1068px) {
+      @include display-flex(flex, auto, center, space-between);
+    }
+
+    .copyright {
+      padding: 2rem 8vw 3.5rem 8vw;
+
+      @media (min-width: 1068px) {
+        padding: 2rem 8vw 3.5rem 8vw;
+      }
+
+      p {
+        font-size: 16px;
+        color: $color-dark-grey;
+
+        span {
+          color: $color-white;
+        }
+      }
+    }
+
+    .sm-nav-links {
+      padding: 0rem 8vw 3.5rem 8vw;
+      gap: 0.5rem;
+      @include display-flex(flex, auto, center, flex-end);
+
+      @media (min-width: 1068px) {
+        padding: 2rem 8vw 3.5rem 8vw;
+      }
+
+      div {
+        width: 45px;
+        height: 45px;
+        font-size: 0.9rem;
+        @include display-flex(flex, auto, center, center);
+        border-radius: 999em;
+        color: $color-dark-black;
+        background-color: $color-dark-grey;
+        cursor: pointer;
+        transition: all 0.3s;
       }
     }
   }
