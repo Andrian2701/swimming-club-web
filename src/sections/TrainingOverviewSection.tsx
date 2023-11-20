@@ -1,8 +1,9 @@
 import { TextHeading } from "../components/TextHeading";
 import { TrustCounts } from "../components/TrustCounts";
-import img4 from "../assests/img/sections/Img4.webp";
-import img2 from "../assests/img/sections/Img2.jpeg";
 import "../styles/sections/TrainingOverviewSection.scss";
+
+const img4 = require("../assests/img/sections/Img4.webp") as string;
+const img2 = require("../assests/img/sections/Img2.jpeg") as string;
 
 export const TrainingOverviewSection = () => {
   return (

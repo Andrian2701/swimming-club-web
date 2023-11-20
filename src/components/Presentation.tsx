@@ -17,7 +17,7 @@ export const Presentation = () => {
             <NavButton id={2} />
           </div>
           <div className="about-us-link">
-            <Link>About us</Link>
+            <Link to="#">About us</Link>
           </div>
         </div>
       </div>

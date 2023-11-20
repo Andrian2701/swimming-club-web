@@ -1,10 +1,20 @@
-import Froggs from "../assests/img/courses/Froggs.avif";
-import Turtles from "../assests/img/courses/Turtles.jpeg";
-import Sharks from "../assests/img/courses/Sharks.jpeg";
-import Pros from "../assests/img/courses/Pros.jpeg";
-import Adults from "../assests/img/courses/Adults.jpeg";
+const Froggs = require("../assests/img/courses/Froggs.avif") as string;
+const Turtles = require("../assests/img/courses/Turtles.jpeg") as string;
+const Sharks = require("../assests/img/courses/Sharks.jpeg") as string;
+const Pros = require("../assests/img/courses/Pros.jpeg") as string;
+const Adults = require("../assests/img/courses/Adults.jpeg") as string;
 
-const courses = [
+interface ICourses {
+  id: number;
+  price: string;
+  img: string;
+  courseType: string;
+  courseTitle: string;
+  description: string;
+  entrolled: number;
+}
+
+const courses: ICourses[] = [
   {
     id: 1,
     price: "100.00",

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+import { ScrollUpButton } from "../components/ScrollUpButton";
 import { NavButton } from "../components/NavButton";
 import { exploreNavLinks } from "../const/footerNavLinks";
 import { resourcesNavLinks } from "../const/footerNavLinks";
 import { socialMediaNavLinks } from "../const/footerNavLinks";
 import { blogNavLinks } from "../const/footerNavLinks";
-import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { AiOutlineMobile } from "react-icons/ai";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { LuClock3 } from "react-icons/lu";
@@ -14,17 +14,9 @@ import "../styles/components/Footer.scss";
 export const Footer = () => {
   const { ref: footerRef, inView: footerVisible } = useInView();
 
-  const handleScrollUp = () => {
-    window.scrollTo(0, 0);
-  };
-
   return (
     <footer ref={footerRef}>
-      {footerVisible ? (
-        <div className="scroll-up-btn" onClick={handleScrollUp}>
-          <MdOutlineKeyboardArrowUp />
-        </div>
-      ) : null}
+      <ScrollUpButton footerVisible={footerVisible} />
       <div className="footer-top">
         <div className="header">
           <span>CLASS FOR YOU</span>
@@ -126,7 +118,9 @@ export const Footer = () => {
         </div>
         <div className="sm-nav-links">
           {socialMediaNavLinks.map((link) => (
-            <div key={link.id}>{link.icon}</div>
+            <div key={link.id}>
+              <Link to="#">{link.icon}</Link>
+            </div>
           ))}
         </div>
       </div>

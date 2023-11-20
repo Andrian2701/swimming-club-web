@@ -1,4 +1,11 @@
-export const textHeadings = [
+interface ITextHeading {
+  id: number;
+  span: string;
+  h2: string;
+  p?: string;
+}
+
+export const textHeadings: ITextHeading[] = [
   {
     id: 1,
     span: "SECURE AND ENJOYABLE",
@@ -33,5 +40,11 @@ export const textHeadings = [
     span: "LEARN TO SWIM NOW!",
     h2: "Exclusive Swimming Courses for Kids and Grown-ups ",
     p: "Comprehensive swimming packages starting at $100 per participant. Skilled mentors, secure swimming facilities. Your warm invitation awaits!",
+  },
+  {
+    id: 7,
+    span: "PASSION & SKILLS",
+    h2: "Meet Our Qualified Swim Coaches",
+    p: "Our school is proud to boast a team of over a dozen highly qualified swimming instructors. What unites us all is not just our expertise in the realm of aquatic education, but a shared passion for sports and a distinctive approach to working with children. This common thread weaves through our team, creating a synergy that goes beyond individual abilities.",
   },
 ];

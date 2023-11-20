@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { mobileMenuNavLinks } from "../const/mobileMenuNavLinks";
 import { RiCloseFill } from "react-icons/ri";
@@ -5,7 +6,15 @@ import { HiOutlineMapPin } from "react-icons/hi2";
 import { BsEnvelope } from "react-icons/bs";
 import "../styles/components/MobileMenu.scss";
 
-export const MobileMenu = ({ mobileMenu, handleSetMobileMenu }) => {
+interface IMobileMenuProps {
+  mobileMenu: boolean;
+  handleSetMobileMenu: (val: boolean) => void;
+}
+
+export const MobileMenu: React.FC<IMobileMenuProps> = ({
+  mobileMenu,
+  handleSetMobileMenu,
+}) => {
   return (
     <div className={`mobile-menu ${mobileMenu ? "open" : "closed"}`}>
       <i>

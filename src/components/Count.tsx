@@ -1,8 +1,20 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { useInViewCounter } from "../hooks/useInViewCounter";
 
-export const Count = ({ title, maxVal, time, className }) => {
-  const metricRef = useRef();
+interface ICountProps {
+  title: string;
+  className: string;
+  maxVal: number;
+  time: number;
+}
+
+export const Count: React.FC<ICountProps> = ({
+  title,
+  maxVal,
+  time,
+  className,
+}) => {
+  const metricRef = useRef<HTMLDivElement>(null);
   const { countRef, count } = useInViewCounter(metricRef, maxVal, time);
 
   return (

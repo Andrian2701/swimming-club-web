@@ -13,7 +13,7 @@ export const HomePage = () => {
       <main>
         <WhatSetsUsApartSection />
         <WhyChooseUsSection />
-        <TeamSection />
+        <TeamSection headingId={3} memberId={4} />
         <TrainingOverviewSection />
         <CoursesSection />
       </main>

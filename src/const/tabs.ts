@@ -1,4 +1,10 @@
-export const tabs = [
+interface ITabs {
+  title: string;
+  heading: string;
+  description: string;
+}
+
+export const tabs: ITabs[] = [
   {
     title: "Compete with joy",
     heading:

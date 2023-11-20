@@ -1,14 +1,10 @@
-import { useMemo } from "react";
-import { teamMembers } from "../const/teamMembers";
 import { PiCaretRightBold } from "react-icons/pi";
+import { ITeamMember } from "../const/teamMembers";
 import "../styles/components/TeamMembers.scss";
 
-export const TeamMember = () => {
-  const memoizedTeamMember = useMemo(
-    () => teamMembers.filter((member) => member.id < 5),
-    []
-  );
-
+export const TeamMember: React.FC<{
+  memoizedTeamMember: ITeamMember[];
+}> = ({ memoizedTeamMember }) => {
   return (
     <>
       {memoizedTeamMember.map((member) => (

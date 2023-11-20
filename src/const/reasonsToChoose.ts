@@ -1,4 +1,10 @@
-export const reasonsToChoose = [
+interface IReasons {
+  id: number;
+  heading: string;
+  description: string;
+}
+
+export const reasonsToChoose: IReasons[] = [
   {
     id: 1,
     heading: "01.",

@@ -5,7 +5,7 @@ footer {
   background-color: $color-dark-black;
 
   .scroll-up-btn {
-    right: 52px;
+    right: 60px;
     bottom: 60px;
     width: 45px;
     height: 45px;
@@ -290,15 +290,17 @@ footer {
       }
 
       div {
-        width: 45px;
-        height: 45px;
-        font-size: 0.9rem;
-        @include display-flex(flex, auto, center, center);
-        border-radius: 999em;
-        color: $color-dark-black;
-        background-color: $color-dark-grey;
-        cursor: pointer;
-        transition: all 0.3s;
+        a {
+          width: 45px;
+          height: 45px;
+          font-size: 0.9rem;
+          @include display-flex(flex, auto, center, center);
+          border-radius: 999em;
+          color: $color-dark-black;
+          background-color: $color-dark-grey;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
       }
     }
   }

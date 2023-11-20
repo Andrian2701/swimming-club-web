@@ -4,9 +4,9 @@ import { tabs } from "../const/tabs";
 import "../styles/components/Tabs.scss";
 
 export const Tab = () => {
-  const [selectedTab, setSelectedTab] = useState(tabs[0]);
+  const [selectedTab, setSelectedTab] = useState<any | null>(tabs[0]);
 
-  const handleSelectedTeb = (val) => {
+  const handleSelectedTeb = (val: any) => {
     setSelectedTab(val);
   };
 

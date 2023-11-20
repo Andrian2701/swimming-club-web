@@ -4,32 +4,34 @@ import { headerNavLinks } from "../const/headerNavLinks";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { NavButton } from "../components/NavButton";
 import { MobileMenu } from "../components/MobileMenu";
-import { Presentation } from "../components/Presentation";
-import logo from "../assests/img/logo/logo.png";
-import "../styles/components/Header.scss";
+import "../styles/components/OtherPagesHeader.scss";
 
-export const Header = () => {
-  const [mobileMenu, setMobileMenu] = useState(false);
+const whiteLogo = require("../assests/img/logo/white-logo.png") as string;
 
-  const handleSetMobileMenu = (val) => {
+export const OtherPageHeader: React.FC = () => {
+  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+
+  const handleSetMobileMenu = (val: boolean) => {
     setMobileMenu(val);
   };
 
   return (
-    <header>
+    <header id="other-page-header">
       <nav>
         <div className="logo">
           <Link to="/">
-            <img src={logo} alt="logo" />
+            <img src={whiteLogo} alt="logo" />
           </Link>
         </div>
         <div className="links">
           <ul>
-            {headerNavLinks.map((link) => (
-              <li key={link.text}>
-                <Link to={link.to}>{link.text}</Link>
-              </li>
-            ))}
+            {headerNavLinks
+              ? headerNavLinks.map((link) => (
+                  <li key={link.text}>
+                    <Link to={link.to}>{link.text}</Link>
+                  </li>
+                ))
+              : null}
           </ul>
         </div>
         <div className="cta-container">
@@ -45,7 +47,9 @@ export const Header = () => {
         mobileMenu={mobileMenu}
         handleSetMobileMenu={handleSetMobileMenu}
       />
-      <Presentation />
+      <div className="header-insc">
+        <p>Meet Our Team</p>
+      </div>
     </header>
   );
 };

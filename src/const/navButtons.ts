@@ -1,4 +1,10 @@
-export const navButtons = [
+interface ILinks {
+  id: number;
+  to: string;
+  text: string;
+}
+
+export const navButtons: ILinks[] = [
   {
     id: 1,
     to: "#",
@@ -16,7 +22,7 @@ export const navButtons = [
   },
   {
     id: 4,
-    to: "#",
+    to: "/our-team",
     text: "Meet the team",
   },
   {
