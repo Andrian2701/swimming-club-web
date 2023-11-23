@@ -3,6 +3,7 @@
 .team-members {
   gap: 2.8rem;
   margin-top: 3rem;
+  width: 100%;
 
   @media (max-width: $query-md) {
     @include display-flex(flex, column, center, auto);
@@ -17,7 +18,7 @@
     display: flex;
   }
 
-  .member {
+  .background-grey {
     width: 100%;
     padding: 2rem 2rem 2rem 2rem;
     transition: 0.3s;
@@ -49,16 +50,16 @@
       @include display-flex(flex, auto, center, center);
 
       img {
-        max-width: 12rem;
-        height: 12rem;
+        max-width: 10.5rem;
+        height: 10.5rem;
         border-radius: 10rem;
         object-fit: cover;
         object-position: 55%;
 
-        @media (min-width: $query-xl) {
-          max-width: 9.5rem;
-          height: 9.5rem;
-        }
+        // @media (min-width: $query-xl) {
+        //   max-width: 9.5rem;
+        //   height: 9.5rem;
+        // }
       }
     }
 
@@ -72,6 +73,7 @@
       }
 
       .go-right-icon {
+        color: $color-dark-black;
         background-color: $color-white;
         font-weight: $fw-700;
         border-radius: 10rem;
@@ -87,6 +89,11 @@
         background-color: $color-purple;
       }
     }
+  }
+
+  .background-white {
+    @extend .background-grey;
+    background-color: $color-white;
   }
 }
 

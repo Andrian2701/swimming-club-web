@@ -32,7 +32,7 @@
       color: $color-light-black;
     }
 
-    .destination {
+    .page-heading {
       @include display-flex(flex, auto, auto, flex-start);
       gap: 0.7rem;
 
@@ -43,7 +43,7 @@
       }
     }
 
-    .page-name {
+    .page-title {
       display: flex;
       align-items: center;
       justify-content: space-between;

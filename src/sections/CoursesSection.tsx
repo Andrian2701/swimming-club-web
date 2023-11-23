@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { SectionHeading } from "../components/SectionHeading";
-import { PageHeading } from "../components/PageHeading";
+import { PageTitleBar } from "../components/PageTitleBar";
 import { CoursesSwiper } from "../components/CoursesSwiper";
 import { Courses } from "../components/Courses";
 import { NavLink } from "../components/NavLink";
@@ -16,7 +16,11 @@ export const CoursesSection: React.FC<{ headingId: number }> = ({
   return (
     <section className="courses-section">
       <div className="header">
-        {path === "/" ? <SectionHeading id={headingId} /> : <PageHeading />}
+        {path === "/" ? (
+          <SectionHeading id={headingId} />
+        ) : (
+          <PageTitleBar text={"Our Courses"} />
+        )}
       </div>
       <div className="courses">
         {path === "/" ? (
