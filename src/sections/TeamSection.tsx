@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import { teamMembers } from "../const/teamMembers";
-import { TextHeading } from "../components/TextHeading";
+import { SectionHeading } from "../components/SectionHeading";
 import { TeamMember } from "../components/TeamMember";
 import { NavButton } from "../components/NavButton";
 import "../styles/sections/TeamSection.scss";
@@ -26,14 +26,14 @@ export const TeamSection: React.FC<TeamSectionProps> = ({
   return (
     <section className="team-section">
       <div className={`header ${path === "/" ? "home-page" : "team-page"}`}>
-        <TextHeading id={headingId} />
+        <SectionHeading id={headingId} />
       </div>
       <div className="team-members">
         <TeamMember memoizedTeamMember={memoizedTeamMember} />
       </div>
       {path === "/" ? (
         <div className="meet-team-btn">
-          <NavButton id={4} />
+          <NavButton destination="/our-team" text="Meet the team" />
         </div>
       ) : null}
     </section>

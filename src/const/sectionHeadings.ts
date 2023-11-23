@@ -1,11 +1,11 @@
-interface ITextHeading {
+interface ISectionHeadings {
   id: number;
   span: string;
   h2: string;
   p?: string;
 }
 
-export const textHeadings: ITextHeading[] = [
+export const sectionHeadings: ISectionHeadings[] = [
   {
     id: 1,
     span: "SECURE AND ENJOYABLE",

@@ -13,22 +13,24 @@
       width: 50%;
     }
 
-    span {
-      letter-spacing: 0.1em;
-      font-size: 0.8rem;
-      font-weight: $fw-600;
-      color: $color-purple;
-    }
+    .text {
+      width: 100%;
+      span {
+        letter-spacing: 0.1em;
+        font-size: 0.8rem;
+        font-weight: $fw-600;
+        color: $color-purple;
+      }
 
-    h2 {
-      color: $color-dark-black;
-      font-size: $h2-big;
-      font-weight: $fw-600;
-      margin-top: 0.8rem;
-      width: 537px;
+      h2 {
+        color: $color-dark-black;
+        font-size: $h2-big;
+        font-weight: $fw-600;
+        margin-top: 0.8rem;
 
-      @media (max-width: $query-md) {
-        font-size: $h2-small;
+        @media (max-width: $query-md) {
+          font-size: $h2-small;
+        }
       }
     }
   }

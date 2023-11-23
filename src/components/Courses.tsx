@@ -1,20 +1,16 @@
-import { useMemo } from "react";
+import { ICourses } from "../const/courses";
 import { IoMdPeople } from "react-icons/io";
 import { AiFillFolder } from "react-icons/ai";
 import { MdPlayLesson } from "react-icons/md";
-import courses from "../const/courses";
 import "../styles/components/Presentation.scss";
 
-export const PresentationCourse = () => {
-  const memoizedPresentationCourses = useMemo(
-    () => courses.filter((course) => course.id === 4 || course.id === 5),
-    []
-  );
-
+export const Courses: React.FC<{ memoizedCourses: ICourses[] }> = ({
+  memoizedCourses,
+}) => {
   return (
     <>
-      {memoizedPresentationCourses.map((course, idx) => (
-        <div className={`course${idx}`} key={course.courseTitle}>
+      {memoizedCourses.map((course) => (
+        <div className={`course${course.id}`} key={course.courseTitle}>
           <div className="img-container">
             <img src={course.img} alt="course" />
             <div className="price-tag">

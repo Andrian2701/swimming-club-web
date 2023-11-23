@@ -1,20 +1,10 @@
-import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { navButtons } from "../const/navButtons";
 
-export const NavButton: React.FC<{ id: number }> = ({ id }) => {
-  const memoizedCorrespondingButton = useMemo(
-    () => navButtons.filter((button) => button.id === id),
-    [id]
-  );
+interface INavButton {
+  destination: string;
+  text: string;
+}
 
-  return (
-    <>
-      {memoizedCorrespondingButton.map((button) => (
-        <Link to={button.to} key={button.id}>
-          {button.text}
-        </Link>
-      ))}
-    </>
-  );
+export const NavButton: React.FC<INavButton> = ({ destination, text }) => {
+  return <Link to={destination}>{text}</Link>;
 };

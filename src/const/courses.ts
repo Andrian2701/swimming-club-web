@@ -3,8 +3,9 @@ const Turtles = require("../assests/img/courses/Turtles.jpeg") as string;
 const Sharks = require("../assests/img/courses/Sharks.jpeg") as string;
 const Pros = require("../assests/img/courses/Pros.jpeg") as string;
 const Adults = require("../assests/img/courses/Adults.jpeg") as string;
+const Diving = require("../assests/img/courses/Diving.jpeg") as string;
 
-interface ICourses {
+export interface ICourses {
   id: number;
   price: string;
   img: string;
@@ -64,6 +65,16 @@ const courses: ICourses[] = [
     description:
       "Tailored for grown-ups, these personalized sessions focus on building confidence and refining swimming skills.",
     entrolled: 11,
+  },
+  {
+    id: 6,
+    price: "350.00",
+    img: Diving,
+    courseType: "Diving course",
+    courseTitle: "Group Diving Lessons",
+    description:
+      "Tailored for everyone, these customized sessions are dedicated to enhancing confidence and honing diving expertise.",
+    entrolled: 20,
   },
 ];
 

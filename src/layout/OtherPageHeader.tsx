@@ -4,7 +4,7 @@ import { headerNavLinks } from "../const/headerNavLinks";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { NavButton } from "../components/NavButton";
 import { MobileMenu } from "../components/MobileMenu";
-import "../styles/components/OtherPagesHeader.scss";
+import "../styles/layout/OtherPagesHeader.scss";
 
 const whiteLogo = require("../assests/img/logo/white-logo.png") as string;
 
@@ -39,7 +39,7 @@ export const OtherPageHeader: React.FC = () => {
             <CgMenuRightAlt onClick={() => handleSetMobileMenu(!mobileMenu)} />
           </div>
           <div className="sign-up-btn">
-            <NavButton id={1} />
+            <NavButton destination="#" text="Sign up" />
           </div>
         </div>
       </nav>

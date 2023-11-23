@@ -51,25 +51,29 @@
       }
 
       .about-us-link {
-        a {
-          font-size: $a-size;
-          font-weight: $fw-700;
-          cursor: pointer;
-          color: $color-purple;
-          transition: all 0.3s;
-          text-decoration: none;
-          position: relative;
+        p {
+          margin-top: 0;
 
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 5rem;
-            width: 70px;
-            height: 1.5px;
-            background-color: $color-purple;
+          a {
+            font-size: $a-size;
+            font-weight: $fw-700;
+            cursor: pointer;
+            color: $color-purple;
+            transition: all 0.3s;
+            text-decoration: none;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -5px;
+              left: 50%;
+              transform: translateX(-50%);
+              border-radius: 5rem;
+              width: 70px;
+              height: 1.5px;
+              background-color: $color-purple;
+            }
           }
         }
       }
@@ -91,7 +95,7 @@
       margin-top: 0rem;
     }
 
-    .course0 {
+    .course4 {
       transition: all 0.3s;
       border-radius: 5px;
       background-color: $color-white;
@@ -208,8 +212,8 @@
       }
     }
 
-    .course1 {
-      @extend .course0;
+    .course5 {
+      @extend .course4;
 
       @media (max-width: 767px), (min-width: 1100px) {
         display: none;

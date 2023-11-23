@@ -9,6 +9,7 @@
   background-position: center center;
   background-size: cover;
   overflow: hidden;
+  position: relative;
 
   nav {
     padding: 2.5rem 8vw;
@@ -96,7 +97,9 @@
   }
 
   .header-insc {
-    margin-top: 170px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
 
     p {
       text-align: center;

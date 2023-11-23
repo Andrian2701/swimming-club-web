@@ -1,4 +1,4 @@
-import { TextHeading } from "../components/TextHeading";
+import { SectionHeading } from "../components/SectionHeading";
 import { TrustCounts } from "../components/TrustCounts";
 import "../styles/sections/TrainingOverviewSection.scss";
 
@@ -13,7 +13,7 @@ export const TrainingOverviewSection = () => {
         <img className="img1" src={img4} alt="section-img" />
       </div>
       <div className="header">
-        <TextHeading id={4} />
+        <SectionHeading id={4} />
         <div className="trust-counts">
           <TrustCounts />
         </div>

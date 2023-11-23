@@ -1,5 +1,5 @@
 import { Tab } from "../components/Tab";
-import { TextHeading } from "../components/TextHeading";
+import { SectionHeading } from "../components/SectionHeading";
 import "../styles/sections/WhatSetsUsApartSection.scss";
 
 const img1 = require("../assests/img/sections/Img1.jpg") as string;
@@ -10,7 +10,7 @@ export const WhatSetsUsApartSection = () => {
   return (
     <section className="what-sets-us-apart-section">
       <div className="header">
-        <TextHeading id={1} />
+        <SectionHeading id={1} />
         <Tab />
       </div>
       <div className="imgs">

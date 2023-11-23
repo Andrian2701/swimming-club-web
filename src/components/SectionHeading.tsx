@@ -1,9 +1,9 @@
-import React, { useMemo } from "react";
-import { textHeadings } from "../const/textHeadings";
+import { useMemo } from "react";
+import { sectionHeadings } from "../const/sectionHeadings";
 
-export const TextHeading: React.FC<{ id: number }> = ({ id }) => {
+export const SectionHeading: React.FC<{ id: number }> = ({ id }) => {
   const memoizedCorrespondingHeading = useMemo(
-    () => textHeadings.filter((header) => header.id === id),
+    () => sectionHeadings.filter((header) => header.id === id),
     [id]
   );
 

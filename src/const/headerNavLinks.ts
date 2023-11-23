@@ -5,6 +5,6 @@ interface ILinks {
 
 export const headerNavLinks: ILinks[] = [
   { to: "/our-team", text: "Team" },
-  { to: "#", text: "Courses" },
+  { to: "/our-courses", text: "Courses" },
   { to: "#", text: "Contact" },
 ];

@@ -15,7 +15,7 @@ export const HomePage = () => {
         <WhyChooseUsSection />
         <TeamSection headingId={3} memberId={4} />
         <TrainingOverviewSection />
-        <CoursesSection />
+        <CoursesSection headingId={5} />
       </main>
       <Footer />
     </>

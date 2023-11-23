@@ -1,16 +1,18 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { headerNavLinks } from "../const/headerNavLinks";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { NavButton } from "../components/NavButton";
 import { MobileMenu } from "../components/MobileMenu";
 import { Presentation } from "../components/Presentation";
-import "../styles/components/Header.scss";
+import "../styles/layout/Header.scss";
 
 const logo = require("../assests/img/logo/logo.png") as string;
 
 export const Header: React.FC = () => {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+  const location = useLocation();
+  const path: string = location.pathname;
 
   const handleSetMobileMenu = (val: boolean) => {
     setMobileMenu(val);
@@ -40,7 +42,7 @@ export const Header: React.FC = () => {
             <CgMenuRightAlt onClick={() => handleSetMobileMenu(!mobileMenu)} />
           </div>
           <div className="sign-up-btn">
-            <NavButton id={1} />
+            <NavButton destination="#" text="Sign up" />
           </div>
         </div>
       </nav>
@@ -48,7 +50,7 @@ export const Header: React.FC = () => {
         mobileMenu={mobileMenu}
         handleSetMobileMenu={handleSetMobileMenu}
       />
-      <Presentation />
+      {path === "/" ? <Presentation /> : null}
     </header>
   );
 };

@@ -33,7 +33,7 @@ export const Tab = () => {
         <div>{selectedTab.description}</div>
       </div>
       <div className="learn-more-btn">
-        <NavButton id={3} />
+        <NavButton destination="#" text="Learn more" />
       </div>
     </div>
   );

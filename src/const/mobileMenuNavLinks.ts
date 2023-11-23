@@ -5,7 +5,7 @@ interface ILinks {
 
 export const mobileMenuNavLinks: ILinks[] = [
   { to: "/our-team", text: "Team" },
-  { to: "#", text: "Courses" },
+  { to: "/our-courses", text: "Courses" },
   { to: "#", text: "Contact" },
   { to: "#", text: "Sign Up" },
 ];

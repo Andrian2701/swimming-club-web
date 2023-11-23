@@ -9,7 +9,7 @@ import { blogNavLinks } from "../const/footerNavLinks";
 import { AiOutlineMobile } from "react-icons/ai";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { LuClock3 } from "react-icons/lu";
-import "../styles/components/Footer.scss";
+import "../styles/layout/Footer.scss";
 
 export const Footer = () => {
   const { ref: footerRef, inView: footerVisible } = useInView();
@@ -27,7 +27,7 @@ export const Footer = () => {
           </h2>
         </div>
         <div className="find-class-btn">
-          <NavButton id={5} />
+          <NavButton destination="/our-courses" text="Find a class for me" />
         </div>
       </div>
       <div className="footer-divider"></div>
