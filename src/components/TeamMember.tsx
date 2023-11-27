@@ -15,9 +15,7 @@ export const TeamMember: React.FC<{
         <Link
           to={`/our-team/team-member/${member.surname}`}
           className={`member ${
-            path === `/our-team/team-member/${member.surname}`
-              ? "background-white"
-              : "background-grey"
+            path === "/" ? "background-grey" : "background-white"
           }`}
           key={member.id}
         >

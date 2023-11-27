@@ -1,4 +1,4 @@
-@use "../global" as *;
+@use "../../global" as *;
 
 .team-member-section {
   padding: 5.5rem 8vw 5.5rem 8vw;
@@ -194,5 +194,10 @@
         }
       }
     }
+  }
+
+  .skills {
+    margin-top: 2.5rem;
+    background-color: $color-white;
   }
 }

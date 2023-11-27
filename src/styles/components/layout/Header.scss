@@ -1,20 +1,11 @@
-@use "../global" as *;
+@use "../../global" as *;
 
-#other-page-header {
+#home-page-header {
   width: 100%;
-  height: 36.5rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("https://swimmingcoach.site-ym.com/resource/resmgr/asca_logos_image/pictures_for_main_page/pubs.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
 
   nav {
     padding: 2.5rem 8vw;
     @include display-flex(flex, auto, center, space-between);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
     @media (max-width: $query-lg) {
       padding: 1rem 3rem;
@@ -43,8 +34,12 @@
           transition: all 0.3s;
           font-weight: $fw-700;
           font-size: $a-size;
-          color: $color-white;
+          color: $color-dark-black;
           cursor: pointer;
+
+          &:hover {
+            color: $color-purple;
+          }
         }
       }
 
@@ -54,7 +49,6 @@
     }
 
     .cta-container {
-      display: flex;
       height: 1.8rem;
       @include display-flex(flex, auto, center, center);
 
@@ -67,9 +61,9 @@
         font-size: 0.9rem;
         text-decoration: none;
         transition: all 0.3s;
-        color: $color-white;
+        color: $color-purple;
         border-radius: 10rem;
-        border: 2px solid $color-white;
+        border: 2px solid $color-purple;
         cursor: pointer;
 
         @media (max-width: $query-md) {
@@ -77,14 +71,14 @@
         }
 
         &:hover {
-          background-color: $color-white;
-          color: $color-purple;
+          background-color: $color-purple;
+          color: $color-white;
         }
       }
     }
 
     .hamburger-menu {
-      color: $color-white;
+      color: $color-purple;
       font-size: 2rem;
       cursor: pointer;
       transition: all 0.3s;
@@ -92,23 +86,6 @@
 
       @media (min-width: 992px) {
         display: none;
-      }
-    }
-  }
-
-  .header-insc {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-
-    p {
-      text-align: center;
-      color: $color-white;
-      font-weight: $fw-600;
-      font-size: 2.7rem;
-
-      @media (max-width: $query-md) {
-        font-size: 2.3rem;
       }
     }
   }

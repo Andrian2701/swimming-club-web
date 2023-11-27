@@ -1,11 +1,11 @@
 import { useLocation } from "react-router-dom";
-import { SectionHeading } from "../components/SectionHeading";
-import { PageTitleBar } from "../components/PageTitleBar";
-import { CoursesSwiper } from "../components/CoursesSwiper";
-import { Courses } from "../components/Courses";
-import { NavLink } from "../components/NavLink";
-import courses from "../const/courses";
-import "../styles/sections/CoursesSection.scss";
+import { SectionHeading } from "../SectionHeading";
+import { PageTitleBar } from "../PageTitleBar";
+import { CoursesSwiper } from "../CoursesSwiper";
+import { Courses } from "../Courses";
+import { NavLink } from "../ui/NavLink";
+import courses from "../../const/courses";
+import "../../styles/components/sections/CoursesSection.scss";
 
 export const CoursesSection: React.FC<{ headingId: number }> = ({
   headingId,

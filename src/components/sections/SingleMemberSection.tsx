@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { FaCheck } from "react-icons/fa6";
-import { PageTitleBar } from "../components/PageTitleBar";
-import { TeamMember } from "../components/TeamMember";
-import { teamMembers } from "../const/teamMembers";
-import "../styles/sections/SingleMemberSection.scss";
+import { PageTitleBar } from "../PageTitleBar";
+import { TeamMember } from "../TeamMember";
+import { teamMembers } from "../../const/teamMembers";
+import "../../styles/components/sections/SingleMemberSection.scss";
 
 export const SingleMemberSection = () => {
   const { surname } = useParams();

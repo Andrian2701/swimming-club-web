@@ -2,10 +2,10 @@ import { useMemo } from "react";
 import { AiOutlineMobile } from "react-icons/ai";
 import { BsEnvelope } from "react-icons/bs";
 import { HiOutlineMapPin } from "react-icons/hi2";
-import { NavButton } from "./NavButton";
+import { NavButton } from "./ui/NavButton";
 import { SectionHeading } from "./SectionHeading";
 import { Courses } from "./Courses";
-import { NavLink } from "./NavLink";
+import { NavLink } from "./ui/NavLink";
 import courses from "../const/courses";
 import "../styles/components/Presentation.scss";
 

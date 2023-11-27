@@ -1,6 +1,6 @@
 import { useSwiper } from "swiper/react";
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
-import "../styles/components/SwipeButtons.scss";
+import "../../styles/components/ui/SwipeButtons.scss";
 
 export const SwipeButtons = () => {
   const swiper = useSwiper();

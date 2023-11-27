@@ -23,6 +23,7 @@ export const TrustCounts = () => {
           maxVal={98}
           time={40}
           className="count3"
+          char="%"
         />
       </div>
     </>

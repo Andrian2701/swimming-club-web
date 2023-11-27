@@ -1,10 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { mobileMenuNavLinks } from "../const/mobileMenuNavLinks";
+import { mobileMenuNavLinks } from "../../const/mobileMenuNavLinks";
 import { RiCloseFill } from "react-icons/ri";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { BsEnvelope } from "react-icons/bs";
-import "../styles/components/MobileMenu.scss";
+import "../../styles/components/ui/MobileMenu.scss";
 
 interface IMobileMenuProps {
   mobileMenu: boolean;

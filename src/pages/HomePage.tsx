@@ -1,10 +1,10 @@
-import { Header } from "../layout/Header";
-import { WhatSetsUsApartSection } from "../sections/WhatSetsUsApartSection";
-import { WhyChooseUsSection } from "../sections/WhyChooseUsSection";
-import { TeamSection } from "../sections/TeamSection";
-import { TrainingOverviewSection } from "../sections/TrainingOverviewSection";
-import { CoursesSection } from "../sections/CoursesSection";
-import { Footer } from "../layout/Footer";
+import { Header } from "../components/layout/Header";
+import { WhatSetsUsApartSection } from "../components/sections/WhatSetsUsApartSection";
+import { WhyChooseUsSection } from "../components/sections/WhyChooseUsSection";
+import { TeamSection } from "../components/sections/TeamSection";
+import { TrainingOverviewSection } from "../components/sections/TrainingOverviewSection";
+import { CoursesSection } from "../components/sections/CoursesSection";
+import { Footer } from "../components/layout/Footer";
 
 export const HomePage = () => {
   return (

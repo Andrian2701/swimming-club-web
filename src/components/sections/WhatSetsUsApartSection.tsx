@@ -1,10 +1,10 @@
-import { Tab } from "../components/Tab";
-import { SectionHeading } from "../components/SectionHeading";
-import "../styles/sections/WhatSetsUsApartSection.scss";
+import { Tab } from "../ui/Tab";
+import { SectionHeading } from "../SectionHeading";
+import "../../styles/components/sections/WhatSetsUsApartSection.scss";
 
-const img1 = require("../assests/img/sections/Img1.jpg") as string;
-const img3 = require("../assests/img/sections/Img3.jpeg") as string;
-const img5 = require("../assests/img/sections/Img5.jpeg") as string;
+const img1 = require("../../assests/img/sections/Img1.jpg") as string;
+const img3 = require("../../assests/img/sections/Img3.jpeg") as string;
+const img5 = require("../../assests/img/sections/Img5.jpeg") as string;
 
 export const WhatSetsUsApartSection = () => {
   return (

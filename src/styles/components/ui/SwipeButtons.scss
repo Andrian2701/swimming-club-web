@@ -1,4 +1,4 @@
-@use "../global" as *;
+@use "../../global" as *;
 
 .swipe-buttons {
   @include display-flex(flex, auto, center, center);

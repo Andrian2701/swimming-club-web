@@ -1,6 +1,6 @@
-import { SectionHeading } from "../components/SectionHeading";
-import { ReasonToChoose } from "../components/ReasonToChoose";
-import "../styles/sections/WhyChooseUsSection.scss";
+import { SectionHeading } from "../SectionHeading";
+import { ReasonToChoose } from "../ReasonToChoose";
+import "../../styles/components/sections/WhyChooseUsSection.scss";
 
 export const WhyChooseUsSection = () => {
   return (

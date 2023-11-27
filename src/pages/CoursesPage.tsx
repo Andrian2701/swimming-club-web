@@ -1,6 +1,6 @@
-import { Header } from "../layout/Header";
-import { CoursesSection } from "../sections/CoursesSection";
-import { Footer } from "../layout/Footer";
+import { Header } from "../components/layout/Header";
+import { CoursesSection } from "../components/sections/CoursesSection";
+import { Footer } from "../components/layout/Footer";
 
 export const CoursesPage = () => {
   return (

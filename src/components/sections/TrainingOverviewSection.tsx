@@ -1,9 +1,9 @@
-import { SectionHeading } from "../components/SectionHeading";
-import { TrustCounts } from "../components/TrustCounts";
-import "../styles/sections/TrainingOverviewSection.scss";
+import { SectionHeading } from "../SectionHeading";
+import { TrustCounts } from "../TrustCounts";
+import "../../styles/components/sections/TrainingOverviewSection.scss";
 
-const img4 = require("../assests/img/sections/Img4.webp") as string;
-const img2 = require("../assests/img/sections/Img2.jpeg") as string;
+const img4 = require("../../assests/img/sections/Img4.webp") as string;
+const img2 = require("../../assests/img/sections/Img2.jpeg") as string;
 
 export const TrainingOverviewSection = () => {
   return (

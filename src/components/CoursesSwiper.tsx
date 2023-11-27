@@ -3,7 +3,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import { IoMdPeople } from "react-icons/io";
 import { AiFillFolder } from "react-icons/ai";
 import { MdPlayLesson } from "react-icons/md";
-import { SwipeButtons } from "./SwipeButtons";
+import { SwipeButtons } from "./ui/SwipeButtons";
 import courses from "../const/courses";
 import "swiper/css";
 import "../styles/components/CoursesSwiper.scss";

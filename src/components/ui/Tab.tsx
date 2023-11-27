@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavButton } from "./NavButton";
-import { tabs } from "../const/tabs";
-import "../styles/components/Tabs.scss";
+import { tabs } from "../../const/tabs";
+import "../../styles/components/ui/Tabs.scss";
 
 export const Tab = () => {
   const [selectedTab, setSelectedTab] = useState<any | null>(tabs[0]);

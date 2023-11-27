@@ -1,10 +1,11 @@
 import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
-import { teamMembers } from "../const/teamMembers";
-import { SectionHeading } from "../components/SectionHeading";
-import { TeamMember } from "../components/TeamMember";
-import { NavButton } from "../components/NavButton";
-import "../styles/sections/TeamSection.scss";
+import { teamMembers } from "../../const/teamMembers";
+import { SectionHeading } from "../SectionHeading";
+import { TeamMember } from "../TeamMember";
+import { NavButton } from "../ui/NavButton";
+import { PageTitleBar } from "../PageTitleBar";
+import "../../styles/components/sections/TeamSection.scss";
 
 interface TeamSectionProps {
   headingId: number;
@@ -24,9 +25,13 @@ export const TeamSection: React.FC<TeamSectionProps> = ({
   );
 
   return (
-    <section className="team-section">
-      <div className={`header ${path === "/" ? "home-page" : "team-page"}`}>
-        <SectionHeading id={headingId} />
+    <section className={`team-section ${path === "/" ? "white" : "grey"}`}>
+      <div className="header">
+        {path === "/" ? (
+          <SectionHeading id={headingId} />
+        ) : (
+          <PageTitleBar text={"Our Team"} />
+        )}
       </div>
       <div className="team-members">
         <TeamMember memoizedTeamMember={memoizedTeamMember} />

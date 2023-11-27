@@ -1,26 +1,29 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { headerNavLinks } from "../const/headerNavLinks";
+import { Link, useLocation } from "react-router-dom";
+import { headerNavLinks } from "../../const/headerNavLinks";
 import { CgMenuRightAlt } from "react-icons/cg";
-import { NavButton } from "../components/NavButton";
-import { MobileMenu } from "../components/MobileMenu";
-import "../styles/layout/OtherPagesHeader.scss";
+import { NavButton } from "../ui/NavButton";
+import { MobileMenu } from "../ui/MobileMenu";
+import { Presentation } from "../Presentation";
+import "../../styles/components/layout/Header.scss";
 
-const whiteLogo = require("../assests/img/logo/white-logo.png") as string;
+const logo = require("../../assests/img/logo/logo.png") as string;
 
-export const OtherPageHeader: React.FC = () => {
+export const Header: React.FC = () => {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+  const location = useLocation();
+  const path: string = location.pathname;
 
   const handleSetMobileMenu = (val: boolean) => {
     setMobileMenu(val);
   };
 
   return (
-    <header id="other-page-header">
+    <header id="home-page-header">
       <nav>
         <div className="logo">
           <Link to="/">
-            <img src={whiteLogo} alt="logo" />
+            <img src={logo} alt="logo" />
           </Link>
         </div>
         <div className="links">
@@ -47,9 +50,7 @@ export const OtherPageHeader: React.FC = () => {
         mobileMenu={mobileMenu}
         handleSetMobileMenu={handleSetMobileMenu}
       />
-      <div className="header-insc">
-        <p>Meet Our Team</p>
-      </div>
+      {path === "/" ? <Presentation /> : null}
     </header>
   );
 };

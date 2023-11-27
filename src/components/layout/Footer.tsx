@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
-import { ScrollUpButton } from "../components/ScrollUpButton";
-import { NavButton } from "../components/NavButton";
-import { exploreNavLinks } from "../const/footerNavLinks";
-import { resourcesNavLinks } from "../const/footerNavLinks";
-import { socialMediaNavLinks } from "../const/footerNavLinks";
-import { blogNavLinks } from "../const/footerNavLinks";
+import { ScrollUpButton } from "../ui/ScrollUpButton";
+import { NavButton } from "../ui/NavButton";
+import { exploreNavLinks } from "../../const/footerNavLinks";
+import { resourcesNavLinks } from "../../const/footerNavLinks";
+import { socialMediaNavLinks } from "../../const/footerNavLinks";
+import { blogNavLinks } from "../../const/footerNavLinks";
 import { AiOutlineMobile } from "react-icons/ai";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { LuClock3 } from "react-icons/lu";
-import "../styles/layout/Footer.scss";
+import "../../styles/components/layout/Footer.scss";
 
 export const Footer = () => {
   const { ref: footerRef, inView: footerVisible } = useInView();
