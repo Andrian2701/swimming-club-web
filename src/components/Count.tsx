@@ -17,10 +17,10 @@ export const Count: React.FC<ICountProps> = ({
   char,
 }) => {
   const metricRef = useRef<HTMLDivElement>(null);
-  const { countRef, count } = useInViewCounter(metricRef, maxVal, time);
+  const { itemRef, count } = useInViewCounter(metricRef, maxVal, time);
 
   return (
-    <div className={`${className}`} ref={countRef}>
+    <div className={`${className}`} ref={itemRef}>
       <div></div>
       <span>
         {count}

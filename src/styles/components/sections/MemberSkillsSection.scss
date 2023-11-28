@@ -1,13 +1,11 @@
 @use "../../global/" as *;
 
-.member-skills-section {
+.member-skills {
   padding: 5.5rem 8vw 5.5rem 8vw;
   background-color: $color-white;
 
   @media (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display-flex(flex, auto, center, center);
     background-image: linear-gradient(
       to left,
       $color-grey 38%,
@@ -15,7 +13,7 @@
     );
   }
 
-  .skills-container {
+  .skills {
     width: 100%;
 
     .header {
@@ -36,37 +34,11 @@
         color: $color-light-black;
       }
     }
-
-    .progress-bar {
-      margin-top: 4rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 2rem;
-
-      .progress {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-
-        .details {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-
-          .percentages {
-            font-weight: $fw-700;
-          }
-        }
-      }
-    }
   }
 
   .img-container {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @include display-flex(flex, auto, center, flex-end);
 
     @media (max-width: 768px) {
       margin-top: 4rem;

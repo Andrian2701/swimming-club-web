@@ -1,68 +1,54 @@
-import { useEffect, useState } from "react";
-import { useRef } from "react";
-import { useInView } from "react-intersection-observer";
+import { useEffect, useState, useRef } from "react";
 import { useInViewCounter } from "../hooks/useInViewCounter";
-import "../styles/components/ProgressLine.scss";
 
 export const ProgressLine = ({
   time,
   maxVal,
   label,
   backgroundColor = "#e5e5e5",
-  visualParts = [
-    {
-      percentage: "0%",
-    },
-  ],
+  visualParts = [{ percentage: "0%" }],
 }) => {
-  const { ref: progressLine, inView: progressLineIsVisible } = useInView();
-  // const progressRef = useRef(null);
-  // const { countRef, count } = useInViewCounter(progressLine, maxVal, time);
-
-  const [widths, setWidths] = useState(
-    visualParts.map(() => {
-      return 0;
-    })
+  const progressRef = useRef(null);
+  const { itemRef, count, itemVisible } = useInViewCounter(
+    progressRef,
+    maxVal,
+    time
   );
 
+  const [widths, setWidths] = useState(visualParts.map(() => 0));
+
   useEffect(() => {
-    if (progressLineIsVisible) {
+    if (itemVisible) {
       requestAnimationFrame(() => {
-        setWidths(
-          visualParts.map((item) => {
-            return item.percentage;
-          })
-        );
+        setWidths(visualParts.map((item) => item.percentage));
       });
     }
-  }, [visualParts, progressLineIsVisible]);
+  }, [visualParts, itemVisible]);
 
   return (
-    <>
+    <div className="progress-line">
       <div
-        className="progressVisualFull"
+        className="progress-visual-full"
         style={{
           backgroundColor,
         }}
       >
-        {visualParts.map((item, index) => {
-          return (
-            <div
-              ref={progressLine}
-              key={item.color}
-              style={{
-                width: widths[index],
-                backgroundColor: item.color,
-              }}
-              className="progressVisualPart"
-            />
-          );
-        })}
+        {visualParts.map((item, idx) => (
+          <div
+            ref={itemRef}
+            key={idx}
+            style={{
+              width: widths[idx],
+              backgroundColor: item.color,
+            }}
+            className="progress-visual-part"
+          />
+        ))}
       </div>
-      <div className="details">
+      <div className="progress-details">
         <span>{label}</span>
-        <span className="percentages">{widths}</span>
+        <span className="percentages">{count}%</span>
       </div>
-    </>
+    </div>
   );
 };
