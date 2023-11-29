@@ -3,6 +3,7 @@ import { HomePage } from "./pages/HomePage";
 import { TeamPage } from "./pages/TeamPage";
 import { CoursesPage } from "./pages/CoursesPage";
 import { TeamMemberPage } from "./pages/TeamMemberPage";
+import { ContactPage } from "./pages/ContactPage";
 import "../src/styles/global/_boilerplate.scss";
 
 export const App = () => {
@@ -16,6 +17,7 @@ export const App = () => {
           path="/our-team/team-member/:surname"
           element={<TeamMemberPage />}
         />
+        <Route path="/contact-us" element={<ContactPage />} />
       </Routes>
     </div>
   );
