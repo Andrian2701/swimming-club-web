@@ -15,7 +15,7 @@ export const Footer = () => {
   const { ref: footerRef, inView: footerVisible } = useInView();
 
   return (
-    <footer ref={footerRef}>
+    <footer id="footer" ref={footerRef}>
       <ScrollUpButton footerVisible={footerVisible} />
       <div className="footer-top">
         <div className="header">

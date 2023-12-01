@@ -14,7 +14,7 @@ export const ClubLocationSection = () => {
   });
 
   return (
-    <section className="location-map">
+    <section className="club-location">
       {isLoaded ? (
         <GoogleMap
           mapContainerClassName="map-container"

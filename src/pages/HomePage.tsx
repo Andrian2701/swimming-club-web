@@ -10,7 +10,7 @@ export const HomePage = () => {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <WhatSetsUsApartSection />
         <WhyChooseUsSection />
         <TeamSection headingId={3} memberId={4} />

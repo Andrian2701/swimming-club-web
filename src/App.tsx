@@ -8,7 +8,7 @@ import "../src/styles/global/_boilerplate.scss";
 
 export const App = () => {
   return (
-    <div className="container">
+    <div id="container">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/our-team" element={<TeamPage />} />

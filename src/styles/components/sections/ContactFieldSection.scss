@@ -1,14 +1,53 @@
-@use "../../global" as *;
+@use "../../global/" as *;
 
-.training-overview-section {
-  padding: 5.5rem 8vw 0 8vw;
-  background-color: $color-grey;
+.contact-field {
+  padding: 5.5rem 8vw 5.5rem 8vw;
+  background-color: $color-white;
 
-  @media (min-width: $query-lg) {
-    @include display-flex(flex, auto, auto, center);
+  @media (max-width: 0px) {
+    @include flex-column();
   }
 
-  .images {
+  @media (min-width: $query-lg) {
+    display: flex;
+  }
+
+  .form-container {
+    @media (min-width: $query-lg) {
+      width: 50%;
+    }
+
+    .header {
+      width: 100%;
+
+      span {
+        letter-spacing: 0.1em;
+        font-size: 0.8rem;
+        color: $color-purple;
+        font-weight: $fw-600;
+      }
+
+      h2 {
+        color: $color-dark-black;
+        font-size: $h2-big;
+        font-weight: $fw-600;
+        margin-top: 0.8rem;
+
+        @media (max-width: $query-sm) {
+          font-size: $h2-small;
+        }
+      }
+
+      p {
+        margin-top: 2.5rem;
+        line-height: 1.5rem;
+        font-weight: $fw-400;
+        color: $color-light-black;
+      }
+    }
+  }
+
+  .img-container {
     gap: 2.5rem;
     margin-top: 2.5rem;
 
@@ -17,7 +56,7 @@
     }
 
     @media (min-width: $query-lg) {
-      @include display-flex(flex, column, flex-start, flex-start);
+      @include display-flex(flex, column, flex-end, flex-end);
       width: 50%;
       height: 100%;
       gap: 3rem;
@@ -58,40 +97,6 @@
         width: 86%;
         height: 40rem;
       }
-    }
-  }
-
-  .header {
-    margin-top: 3rem;
-
-    @media (min-width: $query-lg) {
-      width: 50%;
-      margin-top: 0;
-    }
-
-    span {
-      letter-spacing: 0.1em;
-      color: $color-purple;
-      font-size: 0.8rem;
-      font-weight: $fw-600;
-    }
-
-    h2 {
-      color: $color-dark-black;
-      font-size: $h2-big;
-      font-weight: $fw-600;
-      margin-top: 0.8rem;
-
-      @media (max-width: $query-sm) {
-        font-size: $h2-small;
-      }
-    }
-
-    p {
-      margin-top: 2.5rem;
-      line-height: 1.5rem;
-      font-weight: $fw-400;
-      color: $color-light-black;
     }
   }
 }

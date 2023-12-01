@@ -5,6 +5,17 @@
   justify-content: $justify-content;
 }
 
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin purple-btn {
   a {
     padding: 0.9rem 2rem;

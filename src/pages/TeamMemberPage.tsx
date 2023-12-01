@@ -17,7 +17,7 @@ export const TeamMemberPage = () => {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <MemberProfileSection memoizedTeamMember={memoizedTeamMember} />
         <MemberSkillsSection memoizedTeamMember={memoizedTeamMember} />
       </main>

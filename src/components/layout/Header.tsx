@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header id="home-page-header">
+    <header id="header">
       <nav>
         <div className="logo">
           <Link to="/">

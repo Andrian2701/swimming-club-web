@@ -47,4 +47,10 @@ export const sectionHeadings: ISectionHeadings[] = [
     h2: "Meet Our Qualified Swim Coaches",
     p: "Our school is proud to boast a team of over a dozen highly qualified swimming instructors. What unites us all is not just our expertise in the realm of aquatic education, but a shared passion for sports and a distinctive approach to working with children. This common thread weaves through our team, creating a synergy that goes beyond individual abilities.",
   },
+  {
+    id: 8,
+    span: "INTERESTED?",
+    h2: "Get in Touch With US",
+    p: "We review every email promptly and aim to respond within a maximum of 2 business days. Kindly provide the accurate email address to ensure a swift and effective reply.",
+  },
 ];

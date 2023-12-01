@@ -6,7 +6,7 @@ export const CoursesPage = () => {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <CoursesSection headingId={8} />
       </main>
       <Footer />
