@@ -21,7 +21,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({
 
   const memoizedTeamMember = useMemo(
     () => teamMembers.filter((member) => member.id <= memberId),
-    []
+    [memberId]
   );
 
   return (

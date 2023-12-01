@@ -18,7 +18,7 @@ export const useInViewCounter = (
         clearInterval(interval);
       };
     }
-  }, [count, itemVisible]);
+  }, [count, itemVisible, maxVal, time]);
 
   return { itemRef, count, itemVisible };
 };

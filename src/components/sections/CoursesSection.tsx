@@ -16,14 +16,14 @@ export const CoursesSection: React.FC<{ headingId: number }> = ({
   return (
     <section className="courses-section">
       <div className="header">
-        {path === "/" ? (
+        {path !== "/our-courses" ? (
           <SectionHeading id={headingId} />
         ) : (
           <PageTitleBar text={"Our Courses"} />
         )}
       </div>
       <div className="courses">
-        {path === "/" ? (
+        {path !== "/our-courses" ? (
           <>
             <CoursesSwiper />
             <div className="full-list-link">
