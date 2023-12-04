@@ -8,7 +8,7 @@
     @include display-flex(flex, auto, center, space-between);
 
     @media (max-width: $query-lg) {
-      padding: 1rem 3rem;
+      padding: 1rem 8vw;
     }
 
     .logo {
@@ -52,9 +52,6 @@
       height: 1.8rem;
       @include display-flex(flex, auto, center, center);
 
-      @media (min-width: $query-md) {
-        gap: 1rem;
-      }
       a {
         padding: 0.8rem 2rem;
         font-weight: $fw-700;
@@ -66,7 +63,7 @@
         border: 2px solid $color-purple;
         cursor: pointer;
 
-        @media (max-width: $query-md) {
+        @media (max-width: $query-lg) {
           display: none;
         }
 

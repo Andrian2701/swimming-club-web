@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { headerNavLinks } from "../../const/headerNavLinks";
-import { CgMenuRightAlt } from "react-icons/cg";
+import { IoMdMenu } from "react-icons/io";
 import { NavButton } from "../ui/NavButton";
 import { MobileMenu } from "../ui/MobileMenu";
 import { Presentation } from "../Presentation";
@@ -39,7 +39,7 @@ export const Header: React.FC = () => {
         </div>
         <div className="cta-container">
           <div className="hamburger-menu">
-            <CgMenuRightAlt onClick={() => handleSetMobileMenu(!mobileMenu)} />
+            <IoMdMenu onClick={() => handleSetMobileMenu(!mobileMenu)} />
           </div>
           <div className="sign-up-btn">
             <NavButton destination="#" text="Sign up" />

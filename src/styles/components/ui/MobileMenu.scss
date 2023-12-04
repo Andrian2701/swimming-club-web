@@ -6,7 +6,7 @@
   height: 100vh;
   position: fixed;
   top: 0;
-  right: -100%;
+  left: -100%;
   z-index: 1000;
   transition: all 0.4s ease-in-out;
   @include display-flex(flex, column, auto, auto);
@@ -15,29 +15,41 @@
     transition: all 0.3s;
     font-size: 2rem;
     position: absolute;
-    top: 2.2rem;
-    right: 2.8rem;
+    top: 2rem;
+    right: 2.5rem;
     cursor: pointer;
     color: $color-purple;
   }
 
   .links {
     height: 100%;
+    margin-bottom: 12rem;
 
     ul {
       height: 100%;
       list-style: none;
-      gap: 2.8rem;
+      gap: 2rem;
       @include display-flex(flex, column, center, center);
 
       li {
+        width: 100%;
+
         a {
+          padding-left: 2.5rem;
           text-decoration: none;
           color: $color-dark-black;
           cursor: pointer;
           font-weight: $fw-700;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           transition: all 0.3s;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          svg {
+            margin-right: 2.5rem;
+            font-size: 1.1rem;
+          }
 
           &:hover {
             color: $color-purple;
@@ -48,43 +60,6 @@
   }
 
   &.open {
-    right: 0;
-  }
-
-  .contact-info {
-    position: absolute;
-    bottom: 2.2rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .location {
-      @include display-flex(flex, auto, center, center);
-      gap: 1rem;
-      margin-left: 2rem;
-
-      div {
-        width: 30px;
-        font-size: 1.3rem;
-        height: 30px;
-        @include display-flex(flex, auto, center, center);
-        border-radius: 999em;
-        color: $color-purple;
-        background-color: $color-white;
-      }
-
-      p {
-        margin-top: 0;
-        font-size: 0.7rem;
-        font-weight: $fw-700;
-        color: $color-light-black;
-      }
-    }
-
-    .gmail {
-      @extend .location;
-      margin-right: 2rem;
-    }
+    left: 0;
   }
 }
