@@ -89,81 +89,8 @@
 
   .learn-more-btn {
     @include display-flex(flex, auto, center, auto);
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     height: 3.5rem;
     @include purple-btn;
-  }
-}
-
-.imgs {
-  position: relative;
-  margin-top: 0;
-
-  @media (min-width: $query-sm), (max-width: $query-sm) {
-    height: 29.5rem;
-    margin-top: 4rem;
-  }
-
-  @media (min-width: $query-md) {
-    height: 33.5rem;
-    margin-top: 4rem;
-  }
-
-  @media (min-width: $query-lg) {
-    width: 50%;
-    gap: 3rem;
-    height: 100%;
-    @include display-flex(flex, column, center, center);
-    margin-top: 0;
-  }
-
-  .img1 {
-    width: 100%;
-    object-fit: cover;
-    max-height: 18rem;
-    min-height: 18rem;
-
-    @media (min-width: $query-md) {
-      width: 80%;
-      float: right;
-    }
-
-    @media (min-width: $query-lg) {
-      width: 80%;
-      height: 18rem;
-      margin-left: auto;
-    }
-  }
-
-  .img2 {
-    @extend .img1;
-    position: absolute;
-    max-height: 18rem;
-    min-height: 8rem;
-    top: 15.5rem;
-    left: 0;
-    width: 45%;
-
-    @media (min-width: $query-lg) {
-      width: 80%;
-      margin-left: auto;
-      position: static;
-    }
-  }
-
-  .img3 {
-    @extend .img1;
-    position: absolute;
-    max-height: 18rem;
-    min-height: 8rem;
-    top: 21.5rem;
-    right: 0;
-    width: 45%;
-
-    @media (min-width: $query-lg) {
-      width: 80%;
-      margin-left: auto;
-      position: static;
-    }
   }
 }

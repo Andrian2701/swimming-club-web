@@ -20,7 +20,7 @@ export interface ISkills {
   visualParts: IVisualPart[];
 }
 
-export interface ITeamMember {
+export interface TeamMemberProps {
   id: number;
   position: string;
   img: string;
@@ -32,7 +32,7 @@ export interface ITeamMember {
   skills: ISkills[];
 }
 
-export const teamMembers: ITeamMember[] = [
+export const TEAM_MEMBERS: TeamMemberProps[] = [
   {
     id: 1,
     position: "Head coach",

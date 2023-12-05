@@ -1,15 +1,15 @@
-import { ITeamMember } from "../../const/teamMembers";
-import { PageTitleBar } from "../PageTitleBar";
-import { TeamMember } from "../TeamMember";
-import { Achievements } from "../Achievements";
+import { TeamMemberProps } from "../../const/teamMembers";
+import { PageTitleBar } from "../features/PageTitleBar";
+import { TeamMember } from "../features/TeamMember";
+import { MemberAchievements } from "../features/MemberAchievements";
 import "../../styles/components/sections/MemberProfile.scss";
 
 export const MemberProfileSection: React.FC<{
-  memoizedTeamMember: ITeamMember[];
+  memoizedTeamMember: TeamMemberProps[];
 }> = ({ memoizedTeamMember }) => {
   return (
     <section className="member-profile">
-      <div className="header">
+      <div className="page-title-bar">
         <PageTitleBar text={memoizedTeamMember[0].fullName} />
       </div>
       <div className="profile-content">
@@ -23,7 +23,9 @@ export const MemberProfileSection: React.FC<{
           </div>
           <div className="achievements">
             <h2>Achievements</h2>
-            <Achievements achievements={memoizedTeamMember[0].achievements} />
+            <MemberAchievements
+              achievements={memoizedTeamMember[0].achievements}
+            />
           </div>
         </div>
       </div>

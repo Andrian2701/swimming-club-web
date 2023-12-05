@@ -1,9 +1,13 @@
 import { useMemo } from "react";
-import { sectionHeadings } from "../const/sectionHeadings";
+import { SECTION_HEADINGS } from "../../const/textContent";
 
-export const SectionHeading: React.FC<{ id: number }> = ({ id }) => {
+interface SectionHeading {
+  id: number;
+}
+
+export const SectionHeading = ({ id }: SectionHeading) => {
   const memoizedCorrespondingHeading = useMemo(
-    () => sectionHeadings.filter((header) => header.id === id),
+    () => SECTION_HEADINGS.filter((header) => header.id === id),
     [id]
   );
 
@@ -12,11 +16,11 @@ export const SectionHeading: React.FC<{ id: number }> = ({ id }) => {
       {memoizedCorrespondingHeading.map((heading) => (
         <div className="text" key={heading.id}>
           <div className="header">
-            <span>{heading.span}</span>
-            <h2>{heading.h2}</h2>
+            <span>{heading.title}</span>
+            <h2>{heading.heading}</h2>
           </div>
           <div className="desc">
-            <p>{heading.p}</p>
+            <p>{heading.desc}</p>
           </div>
         </div>
       ))}

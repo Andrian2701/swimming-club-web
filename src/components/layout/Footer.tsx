@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
-import { ScrollUpButton } from "../ui/ScrollUpButton";
-import { NavButton } from "../ui/NavButton";
-import { exploreNavLinks } from "../../const/footerNavLinks";
-import { resourcesNavLinks } from "../../const/footerNavLinks";
-import { socialMediaNavLinks } from "../../const/footerNavLinks";
-import { blogNavLinks } from "../../const/footerNavLinks";
 import { AiOutlineMobile } from "react-icons/ai";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { LuClock3 } from "react-icons/lu";
+import { ScrollUpButton } from "../ui/ScrollUpButton";
+import { NavButton } from "../ui/NavButton";
+import { FooterNavBar } from "../ui/FooterNavBar";
+import { SM_LINKS } from "../../const/navLinks";
 import "../../styles/components/layout/Footer.scss";
 
 export const Footer = () => {
@@ -78,36 +76,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="explore-links">
-          <h3>Explore</h3>
-          <ul>
-            {exploreNavLinks.map((link) => (
-              <li key={link.text}>
-                <Link to={link.to}>{link.text}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="resources-links">
-          <h3>Resources</h3>
-          <ul>
-            {resourcesNavLinks.map((link) => (
-              <li key={link.text}>
-                <Link to={link.to}>{link.text}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="blog-links">
-          <h3>Latest From Blog</h3>
-          <ul>
-            {blogNavLinks.map((link) => (
-              <li key={link.text}>
-                <Link to={link.to}>{link.text}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <FooterNavBar />
       </div>
       <div className="footer-divider"></div>
       <div className="footer-bottom">
@@ -117,7 +86,7 @@ export const Footer = () => {
           </p>
         </div>
         <div className="sm-nav-links">
-          {socialMediaNavLinks.map((link) => (
+          {SM_LINKS.map((link) => (
             <div key={link.id}>
               <Link to="#">{link.icon}</Link>
             </div>

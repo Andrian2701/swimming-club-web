@@ -6,11 +6,7 @@ interface INavLinkProps {
   link: string;
 }
 
-export const NavLink: React.FC<INavLinkProps> = ({
-  paragraph,
-  destination,
-  link,
-}) => {
+export const NavLink = ({ paragraph, destination, link }: INavLinkProps) => {
   return (
     <p>
       {paragraph ? <span>{paragraph}</span> : null}{" "}

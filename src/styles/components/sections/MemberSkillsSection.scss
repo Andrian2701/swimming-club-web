@@ -17,22 +17,8 @@
     width: 100%;
 
     .header {
-      h2 {
-        color: $color-dark-black;
-        font-size: $h2-big;
-        font-weight: $fw-600;
-
-        @media (max-width: $query-sm) {
-          font-size: $h2-small;
-        }
-      }
-
-      p {
-        margin-top: 2.5rem;
-        line-height: 1.5rem;
-        font-weight: $fw-400;
-        color: $color-light-black;
-      }
+      @include section-heading;
+      text-align: left;
     }
   }
 

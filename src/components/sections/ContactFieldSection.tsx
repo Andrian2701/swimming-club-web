@@ -1,6 +1,6 @@
-import { SectionHeading } from "../SectionHeading";
+import { SectionHeading } from "../features/SectionHeading";
 import { ContactForm } from "../ui/ContactForm";
-import { ImagesContainer } from "../ImagesContainer";
+import { ImagesContainer } from "../features/ImagesContainer";
 import "../../styles/components/sections/ContactFieldSection.scss";
 
 const img4 = require("../../assests/img/sections/Img4.webp") as string;

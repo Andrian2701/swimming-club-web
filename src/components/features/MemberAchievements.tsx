@@ -1,7 +1,7 @@
 import { FaCheck } from "react-icons/fa6";
-import "../styles/components/Achievements.scss";
+import "../../styles/components/features/MemberAchievements.scss";
 
-export const Achievements: React.FC<{
+export const MemberAchievements: React.FC<{
   achievements: string[];
 }> = ({ achievements }) => {
   return (

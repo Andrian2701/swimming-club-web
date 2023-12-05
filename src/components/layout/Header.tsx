@@ -1,18 +1,14 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { headerNavLinks } from "../../const/headerNavLinks";
+import { Link } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
 import { NavButton } from "../ui/NavButton";
 import { MobileMenu } from "../ui/MobileMenu";
-import { Presentation } from "../Presentation";
+import { HEADER_LINKS } from "../../const/navLinks";
 import "../../styles/components/layout/Header.scss";
 
-const logo = require("../../assests/img/logo/logo.png") as string;
-
-export const Header: React.FC = () => {
+export const Header = () => {
+  const logo = require("../../assests/img/logo/logo.png") as string;
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
-  const location = useLocation();
-  const path: string = location.pathname;
 
   const handleSetMobileMenu = (val: boolean) => {
     setMobileMenu(val);
@@ -28,13 +24,11 @@ export const Header: React.FC = () => {
         </div>
         <div className="links">
           <ul>
-            {headerNavLinks
-              ? headerNavLinks.map((link) => (
-                  <li key={link.text}>
-                    <Link to={link.to}>{link.text}</Link>
-                  </li>
-                ))
-              : null}
+            {HEADER_LINKS.map((link) => (
+              <li key={link.text}>
+                <Link to={link.to}>{link.text}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="cta-container">
@@ -50,7 +44,6 @@ export const Header: React.FC = () => {
         mobileMenu={mobileMenu}
         handleSetMobileMenu={handleSetMobileMenu}
       />
-      {path === "/" ? <Presentation /> : null}
     </header>
   );
 };

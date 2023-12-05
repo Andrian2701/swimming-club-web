@@ -4,34 +4,6 @@
   padding: 5.5rem 8vw 5.5rem 8vw;
   background-color: $color-grey;
 
-  .header {
-    .page-heading {
-      @include display-flex(flex, auto, auto, flex-start);
-      gap: 0.7rem;
-
-      span {
-        color: #333333;
-        font-size: 16px;
-        font-weight: 300;
-      }
-    }
-
-    .page-title {
-      @include display-flex(flex, auto, center, space-between);
-      margin-top: 2.5rem;
-
-      h1 {
-        color: $color-dark-black;
-        font-weight: $fw-600;
-        font-size: 2.7rem;
-
-        @media (max-width: $query-sm) {
-          font-size: 2.3rem;
-        }
-      }
-    }
-  }
-
   .profile-content {
     margin-top: 2.5rem;
 

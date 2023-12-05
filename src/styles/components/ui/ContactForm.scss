@@ -1,7 +1,7 @@
 @use "../../global" as *;
 
 form {
-  margin-top: 4rem;
+  margin-top: 3rem;
   width: 100%;
 
   .form-inputs {
@@ -88,11 +88,9 @@ form {
   }
 
   .send-form-btn {
-    @include flex-center();
-
     @include purple-btn;
-    margin-top: 2rem;
-    height: 3.5rem;
     @include flex-center();
+    margin-top: 2.5rem;
+    height: 3.5rem;
   }
 }

@@ -15,7 +15,7 @@ export const ClubLocationSection = () => {
 
   return (
     <section className="club-location">
-      {isLoaded ? (
+      {isLoaded && (
         <GoogleMap
           mapContainerClassName="map-container"
           center={MAP_CENTER}
@@ -29,7 +29,7 @@ export const ClubLocationSection = () => {
         >
           <Marker position={MARKER_POSITION} icon={MARKER_STYLES} />
         </GoogleMap>
-      ) : null}
+      )}
     </section>
   );
 };

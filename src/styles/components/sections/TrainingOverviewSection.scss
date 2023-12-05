@@ -1,6 +1,6 @@
 @use "../../global" as *;
 
-.training-overview-section {
+.training-overview {
   padding: 5.5rem 8vw 0 8vw;
   background-color: $color-grey;
 
@@ -61,37 +61,13 @@
     }
   }
 
-  .header {
+  .section-heading {
+    @include section-heading;
     margin-top: 3rem;
 
     @media (min-width: $query-lg) {
       width: 50%;
       margin-top: 0;
-    }
-
-    span {
-      letter-spacing: 0.1em;
-      color: $color-purple;
-      font-size: 0.8rem;
-      font-weight: $fw-600;
-    }
-
-    h2 {
-      color: $color-dark-black;
-      font-size: $h2-big;
-      font-weight: $fw-600;
-      margin-top: 0.8rem;
-
-      @media (max-width: $query-sm) {
-        font-size: $h2-small;
-      }
-    }
-
-    p {
-      margin-top: 2.5rem;
-      line-height: 1.5rem;
-      font-weight: $fw-400;
-      color: $color-light-black;
     }
   }
 }

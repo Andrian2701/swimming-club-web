@@ -5,7 +5,7 @@ const Pros = require("../assests/img/courses/Pros.jpeg") as string;
 const Adults = require("../assests/img/courses/Adults.jpeg") as string;
 const Diving = require("../assests/img/courses/Diving.jpeg") as string;
 
-export interface ICourses {
+export interface CoursesProps {
   id: number;
   price: string;
   img: string;
@@ -15,7 +15,7 @@ export interface ICourses {
   entrolled: number;
 }
 
-const courses: ICourses[] = [
+export const COURSES: CoursesProps[] = [
   {
     id: 1,
     price: "100.00",
@@ -77,5 +77,3 @@ const courses: ICourses[] = [
     entrolled: 20,
   },
 ];
-
-export default courses;

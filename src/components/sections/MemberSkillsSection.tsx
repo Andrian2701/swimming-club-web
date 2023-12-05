@@ -1,11 +1,12 @@
-import { ITeamMember } from "../../const/teamMembers";
-import { ProgressBar } from "../ProgressBar";
+import { TeamMemberProps } from "../../const/teamMembers";
+import { ProgressBar } from "../features/ProgressBar";
+import { ImagesContainer } from "../features/ImagesContainer";
 import "../../styles/components/sections/MemberSkillsSection.scss";
 
 const img6 = require("../../assests/img/sections/img6.webp") as string;
 
 export const MemberSkillsSection: React.FC<{
-  memoizedTeamMember: ITeamMember[];
+  memoizedTeamMember: TeamMemberProps[];
 }> = ({ memoizedTeamMember }) => {
   return (
     <section className="member-skills">
@@ -23,7 +24,7 @@ export const MemberSkillsSection: React.FC<{
         </div>
       </div>
       <div className="img-container">
-        <img src={img6} alt="section-img" />
+        <ImagesContainer img1={img6} />
       </div>
     </section>
   );

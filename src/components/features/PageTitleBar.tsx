@@ -1,6 +1,10 @@
-export const PageTitleBar: React.FC<{ text: string | undefined }> = ({
-  text,
-}) => {
+import "../../styles/components/features/PageTitleBar.scss";
+
+interface PageTitleBar {
+  text: string | undefined;
+}
+
+export const PageTitleBar = ({ text }: PageTitleBar) => {
   return (
     <>
       <div className="page-heading">

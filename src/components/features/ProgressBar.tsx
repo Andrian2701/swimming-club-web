@@ -1,6 +1,6 @@
-import { ISkills } from "../const/teamMembers";
+import { ISkills } from "../../const/teamMembers";
 import { ProgressLine } from "./ProgressLine";
-import "../styles/components/ProgressBar.scss";
+import "../../styles/components/features/ProgressBar.scss";
 
 export const ProgressBar: React.FC<{ skills: ISkills[] }> = ({ skills }) => {
   return (
@@ -12,6 +12,7 @@ export const ProgressBar: React.FC<{ skills: ISkills[] }> = ({ skills }) => {
           time={line.time}
           label={line.label}
           visualParts={line.visualParts}
+          backgroundColor="#e5e5e5"
         />
       ))}
     </>

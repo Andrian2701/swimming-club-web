@@ -1,5 +1,6 @@
+import { SectionHeading } from "../features/SectionHeading";
 import { Tab } from "../ui/Tab";
-import { SectionHeading } from "../SectionHeading";
+import { ImagesContainer } from "../features/ImagesContainer";
 import "../../styles/components/sections/WhatSetsUsApartSection.scss";
 
 const img1 = require("../../assests/img/sections/Img1.jpg") as string;
@@ -8,15 +9,15 @@ const img5 = require("../../assests/img/sections/Img5.jpeg") as string;
 
 export const WhatSetsUsApartSection = () => {
   return (
-    <section className="what-sets-us-apart-section">
-      <div className="header">
+    <section className="what-sets-us-apart">
+      <div className="section-heading">
         <SectionHeading id={1} />
-        <Tab />
+        <div className="tabs">
+          <Tab />
+        </div>
       </div>
       <div className="imgs">
-        <img className="img1" src={img1} alt="section-img" />
-        <img className="img2" src={img5} alt="section-img" />
-        <img className="img3" src={img3} alt="section-img" />
+        <ImagesContainer img1={img1} img2={img5} img3={img3} />
       </div>
     </section>
   );

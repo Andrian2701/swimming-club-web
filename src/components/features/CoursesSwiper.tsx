@@ -1,18 +1,41 @@
-import { ICourses } from "../const/courses";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 import { IoMdPeople } from "react-icons/io";
 import { AiFillFolder } from "react-icons/ai";
 import { MdPlayLesson } from "react-icons/md";
-import "../styles/components/Presentation.scss";
+import { SwipeButtons } from "../ui/SwipeButtons";
+import { COURSES } from "../../const/courses";
+import "swiper/css";
+import "../../styles/components/features/CoursesSwiper.scss";
 
-export const Courses: React.FC<{ memoizedCourses: ICourses[] }> = ({
-  memoizedCourses,
-}) => {
+export const CoursesSwiper = () => {
   return (
-    <>
-      {memoizedCourses.map((course) => (
-        <div className={`course${course.id}`} key={course.courseTitle}>
+    <Swiper
+      slidesPerView={3}
+      spaceBetween={30}
+      modules={[Pagination, Navigation]}
+      loop={true}
+      navigation={true}
+      pagination={{
+        clickable: true,
+      }}
+      breakpoints={{
+        280: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1100: {
+          slidesPerView: 3,
+        },
+      }}
+      className="courses-swiper"
+    >
+      {COURSES.map((course) => (
+        <SwiperSlide key={course.id}>
           <div className="img-container">
-            <img src={course.img} alt="course" />
+            <img src={course.img} alt="course-img" />
             <div className="price-tag">
               <span>${course.price}</span>
               <p>/ person</p>
@@ -44,8 +67,11 @@ export const Courses: React.FC<{ memoizedCourses: ICourses[] }> = ({
               </div>
             </div>
           </div>
-        </div>
+        </SwiperSlide>
       ))}
-    </>
+      <div className="swipe-buttons">
+        <SwipeButtons />
+      </div>
+    </Swiper>
   );
 };

@@ -1,46 +1,23 @@
-@use "../global" as *;
+@use "../../global" as *;
 
 .presentation {
   padding: 5.5rem 8vw 5.5rem 8vw;
   background-color: $color-grey;
-
   @media (min-width: $query-lg) {
     display: flex;
     flex-wrap: wrap;
   }
 
   .presentation-header {
+    @include section-heading;
+    text-align: left;
+
     @media (min-width: 1100px) {
       width: 50%;
     }
 
-    span {
-      letter-spacing: 0.1em;
-      color: $color-purple;
-      font-size: 0.8rem;
-      font-weight: $fw-600;
-    }
-
-    h2 {
-      color: $color-dark-black;
-      font-size: $h2-big;
-      font-weight: $fw-600;
-      margin-top: 0.8rem;
-
-      @media (max-width: $query-sm) {
-        font-size: $h2-small;
-      }
-    }
-
-    p {
-      margin-top: 2.5rem;
-      line-height: 1.5rem;
-      font-weight: $fw-400;
-      color: $color-light-black;
-    }
-
     .nav-block {
-      margin-top: 3rem;
+      margin-top: 2.5rem;
       @include display-flex(flex, auto, center, flex-start);
       gap: 2.5rem;
       height: 3.5rem;

@@ -1,18 +1,18 @@
-import { reasonsToChoose } from "../const/reasonsToChoose";
-import "../styles/components/ReasonsToChoose.scss";
+import { REASONS_TO_CHOOSE } from "../../const/textContent";
+import "../../styles/components/features/ReasonsToChoose.scss";
 
 export const ReasonToChoose = () => {
   return (
     <>
-      {reasonsToChoose.map((item, idx) => (
+      {REASONS_TO_CHOOSE.map((item, idx) => (
         <div
           key={item.id}
           className={`reason ${
             idx % 4 === 0 ? "white" : idx % 2 === 0 ? "purple" : "green"
           }`}
         >
-          <h4>{item.heading}</h4>
-          <div>{item.description}</div>
+          <h4>{item.order}</h4>
+          <div>{item.desc}</div>
         </div>
       ))}
     </>

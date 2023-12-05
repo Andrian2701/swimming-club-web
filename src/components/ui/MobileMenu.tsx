@@ -1,27 +1,27 @@
 import { Link } from "react-router-dom";
-import { mobileMenuNavLinks } from "../../const/mobileMenuNavLinks";
+import { MOBILE_MENU_LINKS } from "../../const/navLinks";
 import { IoMdClose } from "react-icons/io";
 import { FaAngleRight } from "react-icons/fa6";
 import "../../styles/components/ui/MobileMenu.scss";
 
-interface IMobileMenuProps {
+interface MobileMenu {
   mobileMenu: boolean;
   handleSetMobileMenu: (val: boolean) => void;
 }
 
-export const MobileMenu: React.FC<IMobileMenuProps> = ({
-  mobileMenu,
-  handleSetMobileMenu,
-}) => {
+export const MobileMenu = ({ mobileMenu, handleSetMobileMenu }: MobileMenu) => {
   return (
-    <div className={`mobile-menu ${mobileMenu ? "open" : "closed"}`}>
+    <div className={`mobile-menu ${mobileMenu ? "open" : ""}`}>
       <i>
         <IoMdClose onClick={() => handleSetMobileMenu(!mobileMenu)} />
       </i>
       <div className="links">
         <ul>
-          {mobileMenuNavLinks.map((link) => (
-            <li key={link.text}>
+          {MOBILE_MENU_LINKS.map((link) => (
+            <li
+              key={link.text}
+              onClick={() => handleSetMobileMenu(!mobileMenu)}
+            >
               <Link to={link.to}>
                 {link.text} <FaAngleRight />
               </Link>

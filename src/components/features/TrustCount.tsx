@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import { useInViewCounter } from "../hooks/useInViewCounter";
+import { useInViewCounter } from "../../hooks/useInViewCounter";
 
-interface ICountProps {
+interface TrustCount {
   title: string;
   className: string;
   maxVal: number;
@@ -9,22 +9,22 @@ interface ICountProps {
   char?: string;
 }
 
-export const Count: React.FC<ICountProps> = ({
+export const TrustCount = ({
   title,
   maxVal,
   time,
   className,
   char,
-}) => {
-  const metricRef = useRef<HTMLDivElement>(null);
-  const { itemRef, count } = useInViewCounter(metricRef, maxVal, time);
+}: TrustCount) => {
+  const trustCountRef = useRef<HTMLDivElement>(null);
+  const { itemRef, count } = useInViewCounter(trustCountRef, maxVal, time);
 
   return (
     <div className={`${className}`} ref={itemRef}>
       <div></div>
       <span>
         {count}
-        {char ? "%" : null}
+        {char && "%"}
       </span>
       <h5>{title}</h5>
     </div>

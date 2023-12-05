@@ -1,10 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import { PiCaretRightBold } from "react-icons/pi";
-import { ITeamMember } from "../const/teamMembers";
-import "../styles/components/TeamMembers.scss";
+import { TeamMemberProps } from "../../const/teamMembers";
+import "../../styles/components/features/TeamMembers.scss";
 
 export const TeamMember: React.FC<{
-  memoizedTeamMember: ITeamMember[];
+  memoizedTeamMember: TeamMemberProps[];
 }> = ({ memoizedTeamMember }) => {
   const location = useLocation();
   const path: string = location.pathname;
@@ -13,11 +13,11 @@ export const TeamMember: React.FC<{
     <>
       {memoizedTeamMember.map((member) => (
         <Link
+          key={member.id}
           to={`/our-team/team-member/${member.surname}`}
           className={`member ${
             path === "/" ? "background-grey" : "background-white"
           }`}
-          key={member.id}
         >
           <span>{member.position}</span>
           <div className="img-container">

@@ -1,5 +1,18 @@
 import { useEffect, useState, useRef } from "react";
-import { useInViewCounter } from "../hooks/useInViewCounter";
+import { useInViewCounter } from "../../hooks/useInViewCounter";
+
+interface VisualPart {
+  percentage: string;
+  color?: string;
+}
+
+interface ProgressLineProps {
+  time: number;
+  maxVal: number;
+  label: string;
+  backgroundColor?: string;
+  visualParts?: VisualPart[];
+}
 
 export const ProgressLine = ({
   time,
@@ -7,15 +20,15 @@ export const ProgressLine = ({
   label,
   backgroundColor = "#e5e5e5",
   visualParts = [{ percentage: "0%" }],
-}) => {
-  const progressRef = useRef(null);
+}: ProgressLineProps) => {
+  const progressRef = useRef<HTMLDivElement>(null);
   const { itemRef, count, itemVisible } = useInViewCounter(
     progressRef,
     maxVal,
     time
   );
 
-  const [widths, setWidths] = useState(visualParts.map(() => 0));
+  const [widths, setWidths] = useState<string[]>(visualParts.map(() => "0%"));
 
   useEffect(() => {
     if (itemVisible) {
@@ -26,7 +39,7 @@ export const ProgressLine = ({
   }, [visualParts, itemVisible]);
 
   return (
-    <div className="progress-line">
+    <div className="progress-line" ref={progressRef}>
       <div
         className="progress-visual-full"
         style={{

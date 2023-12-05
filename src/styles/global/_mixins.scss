@@ -37,3 +37,30 @@
     }
   }
 }
+
+@mixin section-heading {
+  span {
+    letter-spacing: 0.1em;
+    color: #4f2ec9;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    color: #181818;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  p {
+    margin-top: 2.5rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #333333;
+  }
+}

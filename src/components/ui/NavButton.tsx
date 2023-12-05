@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-interface INavButton {
+interface NavButton {
   destination: string;
   text: string;
 }
 
-export const NavButton: React.FC<INavButton> = ({ destination, text }) => {
+export const NavButton = ({ destination, text }: NavButton) => {
   return <Link to={destination}>{text}</Link>;
 };
