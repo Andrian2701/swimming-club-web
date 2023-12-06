@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { useParams } from "react-router-dom";
+import { useScrollTop } from "../hooks/useScrollTop";
 import { TEAM_MEMBERS } from "../const/teamMembers";
 import { MemberProfileSection } from "../components/sections/MemberProfileSection";
 import { MemberSkillsSection } from "../components/sections/MemberSkillsSection";
@@ -11,6 +12,8 @@ export const TeamMemberPage = () => {
     () => TEAM_MEMBERS.filter((member) => member.surname === surname),
     [surname]
   );
+
+  useScrollTop();
 
   return (
     <main id="main">

@@ -194,7 +194,7 @@ export const TEAM_MEMBERS: TeamMemberProps[] = [
       "Megan, serving as an invaluable assistant to our swimming coach, brings a unique background in psychology and mentoring to the team. Her diverse skill set enriches the coaching dynamic, providing athletes with not only technical expertise but also emotional support. Megan's empathetic nature and understanding of mental well-being create a holistic coaching environment, promoting both physical and mental growth among our participants.",
     achievements: [
       "Psychological support pioneer",
-      "Mentoring excellence:",
+      "Mentoring excellence",
       "Team bonding initiatives",
     ],
     skills: [

@@ -6,7 +6,7 @@ interface ScrollUpButtonProps {
 
 export const ScrollUpButton = ({ footerVisible }: ScrollUpButtonProps) => {
   const handleScrollUp = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
