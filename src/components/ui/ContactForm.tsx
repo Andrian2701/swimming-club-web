@@ -6,13 +6,13 @@ export const ContactForm = () => {
     <form>
       <div className="form-inputs">
         <div className="user-data-inputs">
-          <div>
+          <div className="name-input">
             <label>YOUR NAME *</label>
             <span>
               <input type="text" />
             </span>
           </div>
-          <div>
+          <div className="email-input">
             <label>EMAIL-ADDRESS *</label>
             <span>
               <input type="email" />

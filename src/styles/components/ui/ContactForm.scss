@@ -63,6 +63,11 @@ form {
     .user-data-inputs {
       @extend .message-textarea;
 
+      .name-input,
+      .email-input {
+        border-bottom-width: 0px;
+      }
+
       div {
         height: 99px;
 
