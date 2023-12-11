@@ -71,9 +71,9 @@ form {
       div {
         height: 99px;
 
-        @media (max-width: $query-lg) {
-          border-right-width: 0px;
-        }
+        // @media (max-width: $query-lg) {
+        //   border-right-width: 0px;
+        // }
 
         @media (min-width: $query-lg) {
           border-bottom-width: 0px;
